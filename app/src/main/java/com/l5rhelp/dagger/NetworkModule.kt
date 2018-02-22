@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-class CallsModule {
+class NetworkModule {
 
     @Provides @Singleton
     fun provideCache(@ApplicationQualifier context: Context) = Cache(context.cacheDir, 10 * 1024 * 1024.toLong())
@@ -38,6 +38,6 @@ class CallsModule {
     }
 
     @Provides @Singleton
-    fun providesLastFmService(retrofit: Retrofit): FiveRingsDBService = retrofit.create(FiveRingsDBService::class.java)
+    fun providesFiveRingsDBService(retrofit: Retrofit): FiveRingsDBService = retrofit.create(FiveRingsDBService::class.java)
 
 }

@@ -7,8 +7,8 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(AppModule::class))
+@Component(    modules = [(AppModule::class), (CallsModule::class)])
 interface AppComponent {
     fun inject(app: App)
-    fun plus(maineModule: MainModule): MainComponent
+    fun plus(mainModule: MainModule): MainComponent
 }

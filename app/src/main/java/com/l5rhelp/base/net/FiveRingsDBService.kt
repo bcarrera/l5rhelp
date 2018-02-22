@@ -7,6 +7,10 @@ import retrofit2.http.Query
 
 interface FiveRingsDBService {
 
+    companion object {
+        const val ROOT_URL = "https://api.fiveringsdb.com"
+    }
+
     //Cards
     @GET("/cards")
     fun getAllCards(): Call<String>

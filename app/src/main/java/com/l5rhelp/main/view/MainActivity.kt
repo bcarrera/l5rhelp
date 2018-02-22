@@ -5,12 +5,10 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import android.widget.Toast
 import com.l5rhelp.R
 import com.l5rhelp.dagger.MainModule
 import com.l5rhelp.main.presenter.MainPresenter
-import com.l5rhelp.utils.app
-import com.l5rhelp.utils.toast
+import com.l5rhelp.ui.utils.app
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.l5rhelp.rulings.model
+package com.l5rhelp.domain.model
 
 import com.google.gson.annotations.SerializedName
 

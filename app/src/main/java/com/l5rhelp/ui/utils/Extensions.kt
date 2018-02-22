@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.l5rhelp.utils
+package com.l5rhelp.ui.utils
 
 import android.app.Activity
 import android.content.Context

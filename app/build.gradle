@@ -44,11 +44,13 @@ dependencies {
     //Retrofit
     compile "com.squareup.okhttp3:okhttp:$okhttp_version"
     compile "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
-
     compile("com.squareup.retrofit2:retrofit:$retrofit_version") {
         // exclude Retrofit’s OkHttp peer-dependency module and define your own module import
         exclude module: 'okhttp'
     }
     compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
 
 }

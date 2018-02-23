@@ -1,37 +1,16 @@
 package com.l5rhelp.domain.interactors
 
-import com.l5rhelp.BuildConfig
 import com.l5rhelp.base.net.FiveRingsDBService
 import com.l5rhelp.domain.model.CardsResponse
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 /**
  * Created by Krupto on 22/02/2018.
  */
 
-class GetAllCardsInteractor {
-
-    val client = OkHttpClient().newBuilder()
-            .addInterceptor(HttpLoggingInterceptor().apply {
-                level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
-            })
-            .build()
-
-    val retrofit = Retrofit.Builder()
-            .baseUrl(FiveRingsDBService.ROOT_URL)
-            .client(client)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-    val fiveRingsDBService = retrofit.create(FiveRingsDBService::class.java)
+class GetAllCardsInteractor (private val fiveRingsDBService : FiveRingsDBService) {
 
     fun getAllCardsInteractor (mPresenter : GetAllCardsInteractor.Presenter) {
 

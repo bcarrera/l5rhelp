@@ -8,11 +8,14 @@ import android.view.MenuItem
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.MainModule
 import com.l5rhelp.ui.fragment.CardsFragment
+import com.l5rhelp.ui.fragment.RulesFragment
+import com.l5rhelp.ui.fragment.SettingsFragment
 import com.l5rhelp.ui.presenter.MainPresenter
 import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
+import com.l5rhelp.ui.utils.replaceFragmentSafely
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, MainPresenter.View {
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toolbar_navigation_image.setOnClickListener { drawer_layout.openDrawer(GravityCompat.START) }
         nav_view.setNavigationItemSelectedListener(this)
 
-        addFragment(CardsFragment(), "CardFragment", R.layout.content_main)
+        addFragment(CardsFragment(), "CardFragment", R.id.main_content)
     }
 
     override fun onBackPressed() {
@@ -52,12 +55,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.nav_search -> {
                 toolbar_navigation_title.text = getString(R.string.left_menu_option1)
+                replaceFragmentSafely(CardsFragment(), "CardsFragment", false, R.id.main_content)
             }
             R.id.nav_rules -> {
                 toolbar_navigation_title.text = getString(R.string.left_menu_option2)
+                replaceFragmentSafely(RulesFragment(), "RulesFragment", false, R.id.main_content)
             }
             R.id.nav_settings -> {
                 toolbar_navigation_title.text = getString(R.string.left_menu_option3)
+                replaceFragmentSafely(SettingsFragment(), "SettingsFragment", false, R.id.main_content)
             }
         }
 

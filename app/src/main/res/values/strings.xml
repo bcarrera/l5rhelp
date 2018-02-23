@@ -10,12 +10,8 @@
     <string name="left_menu_title1">L5R Help</string>
     <string name="left_menu_title2">Una herramienta para facilitar el desarrollo de tus partidas</string>
 
-    <string name="left_menu_option1">Búsquedas</string>
+    <string name="left_menu_option1">Cartas</string>
     <string name="left_menu_option2">Reglas</string>
     <string name="left_menu_option3">Ajustes</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Cards fragment</string>
-
 
 </resources>

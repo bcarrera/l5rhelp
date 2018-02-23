@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.MainModule
+import com.l5rhelp.ui.fragment.CardsFragment
 import com.l5rhelp.ui.presenter.MainPresenter
+import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -25,14 +27,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         component.inject(this)
 
-        mPresenter.initPresenter()
+        //mPresenter.initPresenter()
+        init()
     }
 
     private fun init () {
 
         toolbar_navigation_image.setOnClickListener { drawer_layout.openDrawer(GravityCompat.START) }
-
         nav_view.setNavigationItemSelectedListener(this)
+
+        addFragment(CardsFragment(), "CardFragment", R.layout.content_main)
     }
 
     override fun onBackPressed() {

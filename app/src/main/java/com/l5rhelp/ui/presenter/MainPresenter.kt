@@ -18,7 +18,7 @@ class MainPresenter (val view: View,
 
     fun initPresenter() {
         //getAllCardsInteractor.getAllCardsInteractor(this)
-        getAllCardsFromDatabase()
+        //getAllCardsFromDatabase()
     }
 
     override fun getAllCardsSuccess(response : CardsResponse?) {

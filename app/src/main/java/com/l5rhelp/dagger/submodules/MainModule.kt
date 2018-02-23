@@ -1,8 +1,8 @@
-package com.l5rhelp.dagger
+package com.l5rhelp.dagger.submodules
 
 import com.l5rhelp.domain.interactors.GetAllCardsInteractor
-import com.l5rhelp.main.presenter.MainPresenter
-import com.l5rhelp.main.view.MainActivity
+import com.l5rhelp.ui.presenter.MainPresenter
+import com.l5rhelp.ui.activity.MainActivity
 import dagger.Module
 import dagger.Provides
 

@@ -1,4 +1,4 @@
-package com.l5rhelp.main.presenter
+package com.l5rhelp.ui.presenter
 
 import com.l5rhelp.domain.interactors.GetAllCardsInteractor
 import com.l5rhelp.domain.model.CardsResponse
@@ -7,7 +7,7 @@ import com.l5rhelp.domain.model.CardsResponse
  * Created by Krupto on 17/02/2018.
  */
 class MainPresenter (val view: View,
-                    val getAllCardsInteractor: GetAllCardsInteractor): GetAllCardsInteractor.Presenter {
+                     val getAllCardsInteractor: GetAllCardsInteractor): GetAllCardsInteractor.Presenter {
 
     fun initPresenter() {
         view.initPresenterSuccess()
@@ -15,11 +15,9 @@ class MainPresenter (val view: View,
     }
 
     override fun getAllCardsSuccess(response : CardsResponse?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun getAllCardsError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     interface View {

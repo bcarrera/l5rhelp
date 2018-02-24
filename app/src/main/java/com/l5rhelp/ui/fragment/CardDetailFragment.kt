@@ -1,17 +1,15 @@
 package com.l5rhelp.ui.fragment
 
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import com.l5rhelp.R
 import com.l5rhelp.domain.model.Card
+import com.l5rhelp.ui.utils.Utils
 import com.l5rhelp.ui.utils.hide
 import com.l5rhelp.ui.utils.loadUrl
 import com.l5rhelp.ui.utils.show
@@ -30,15 +28,22 @@ class CardDetailFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        initTextInfo(arguments?.getSerializable("card") as Card)
+        if(Utils.hasNetworkConnection(context)) {
+            initImage(arguments?.getSerializable("card") as Card)
+        } else {
+            initTextInfo(arguments?.getSerializable("card") as Card)
+        }
     }
 
     fun initImage (card : Card) {
+        card_detail_text_info_layout.hide()
+        card_detail_image.show()
         card_detail_image.loadUrl(card.packCards.get(0).imageUrl)
     }
 
     fun initTextInfo (card : Card) {
-
+        card_detail_image.hide()
+        card_detail_text_info_layout.show()
         when(card.clan) {
             "scorpion" -> {
                 card_detail_mon_image.setBackgroundResource(R.drawable.ic_mon_scorpion)}

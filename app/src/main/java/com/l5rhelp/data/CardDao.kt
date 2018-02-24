@@ -12,6 +12,9 @@ interface CardDao {
     @Query("SELECT * FROM card_table")
     fun getAllCards(): MutableList<Card>
 
+    @Query("SELECT * FROM card_table WHERE name LIKE :name")
+    fun filterByName(name : String): MutableList<Card>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCard(card: Card)
 

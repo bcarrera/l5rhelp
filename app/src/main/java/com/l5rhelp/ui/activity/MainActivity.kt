@@ -15,7 +15,6 @@ import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
 import com.l5rhelp.ui.utils.replaceFragmentSafely
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, MainPresenter.View {

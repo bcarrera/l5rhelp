@@ -5,21 +5,49 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.ImageView
 
 import com.l5rhelp.R
+import com.l5rhelp.dagger.submodules.CardsModule
+import com.l5rhelp.domain.model.Card
 import com.l5rhelp.ui.presenter.CardsPresenter
+import com.l5rhelp.ui.utils.app
+import javax.inject.Inject
 
 
 class CardsFragment : Fragment(), CardsPresenter.View {
 
+    //Dagger
+    @Inject lateinit var mPresenter: CardsPresenter
+    val component by lazy { activity?.app?.component?.plus(CardsModule(this)) }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cards, container, false)
+
+        val v = inflater.inflate(R.layout.fragment_cards, container, false)
+
+        component?.inject(this)
+
+        val cardsSearchImage = v?.findViewById<ImageView>(R.id.cards_search_imageview)
+        val cardsSearchEditText = v?.findViewById<EditText>(R.id.cards_search_edittext)
+
+        cardsSearchImage?.setOnClickListener { mPresenter.filterByName(cardsSearchEditText?.text.toString())  }
+
+        //init()
+
+        return v
     }
 
-    override fun initPresenterSuccess() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    private fun init () {
+        val cardsSearchImage = view?.findViewById<ImageView>(R.id.cards_search_imageview)
+        val cardsSearchEditText = view?.findViewById<EditText>(R.id.cards_search_edittext)
+
+        cardsSearchImage?.setOnClickListener { mPresenter.filterByName(cardsSearchEditText?.text.toString())  }
     }
+
+    override fun filterByNameSuccess(cardList: List<Card>) {
+    }
+
 
 }

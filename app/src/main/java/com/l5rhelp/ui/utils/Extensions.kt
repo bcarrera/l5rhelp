@@ -4,6 +4,7 @@ package com.l5rhelp.ui.utils
 
 import android.app.Activity
 import android.content.Context
+import android.support.v4.app.Fragment
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
@@ -23,3 +24,4 @@ fun View.hide() = run { visibility = View.GONE }
 
 val Activity.app: App
     get() = application as App
+

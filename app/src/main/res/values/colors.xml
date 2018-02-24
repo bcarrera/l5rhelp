@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#000</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#000</color>
     <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="search_background">#E0E0E0</color>
 
 </resources>

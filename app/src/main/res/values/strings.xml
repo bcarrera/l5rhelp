@@ -14,4 +14,9 @@
     <string name="left_menu_option2">Reglas</string>
     <string name="left_menu_option3">Ajustes</string>
 
+    <!-- Cards -->
+    <string name="cards_intructions">Elije los filtros que necesites o realiza una búsqueda por el nombre de la carta.</string>
+    <string name="cards_search_hint">Nombre de la carta</string>
+
+
 </resources>

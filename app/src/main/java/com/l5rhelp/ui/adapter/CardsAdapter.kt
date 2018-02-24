@@ -25,17 +25,35 @@ class CardsAdapter(val items: List<Card>, val listener: (Card) -> Unit) : Recycl
             item_card_name.text = item.name.capitalize()
 
             when(item.clan) {
-                "scorpion" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.scorpion_color))
-                "dragon" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.dragon_color))
-                "lion" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.lion_color))
-                "crane" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.crane_color))
-                "crab" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.crab_color))
-                "phoenix" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.phoenix_color))
-                "unicorn" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.unicorn_color))
-                "neutral" -> item_card_clan.setTextColor(ContextCompat.getColor(context, R.color.neutral_color))
+                "scorpion" -> {
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.scorpion_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_scorpion)}
+                "dragon" -> {
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.dragon_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_dragon)}
+                "lion" -> {
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.lion_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_lion)}
+                "crane" -> {
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.crane_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_crane)}
+                "crab" ->{
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.crab_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_crab)}
+                "phoenix" ->{
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.phoenix_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_phoenix)}
+                "unicorn" -> {
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.unicorn_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_unicorn)}
+                "neutral" ->{
+                    item_card_name.setTextColor(ContextCompat.getColor(context, R.color.neutral_color))
+                    item_card_mon.setBackgroundResource(R.drawable.ic_mon_neutral)}
             }
             item_card_clan.text = item.clan.capitalize()
             item_card_type.text = item.type.capitalize()
+            item_card_deck.text = "- ${item.side.capitalize()} Deck"
+
             setOnClickListener { listener(item) }
         }
     }

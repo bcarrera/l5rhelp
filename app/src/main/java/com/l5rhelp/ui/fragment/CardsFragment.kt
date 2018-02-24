@@ -18,6 +18,10 @@ import com.l5rhelp.ui.presenter.CardsPresenter
 import com.l5rhelp.ui.utils.app
 import com.l5rhelp.ui.utils.toast
 import javax.inject.Inject
+import android.support.v7.widget.DividerItemDecoration
+import com.l5rhelp.ui.utils.hide
+import com.l5rhelp.ui.utils.show
+import kotlinx.android.synthetic.main.fragment_cards.*
 
 
 class CardsFragment : Fragment(), CardsPresenter.View {
@@ -30,30 +34,28 @@ class CardsFragment : Fragment(), CardsPresenter.View {
                               savedInstanceState: Bundle?): View? {
 
         val v = inflater.inflate(R.layout.fragment_cards, container, false)
-
         component?.inject(this)
-
-        val cardsSearchImage = v?.findViewById<ImageView>(R.id.cards_search_imageview)
-        val cardsSearchEditText = v?.findViewById<EditText>(R.id.cards_search_edittext)
-
-        cardsSearchImage?.setOnClickListener { mPresenter.filterByName(cardsSearchEditText?.text.toString())  }
-
-        //init()
 
         return v
     }
 
-    private fun init () {
-        val cardsSearchImage = view?.findViewById<ImageView>(R.id.cards_search_imageview)
-        val cardsSearchEditText = view?.findViewById<EditText>(R.id.cards_search_edittext)
+    override fun onResume() {
+        super.onResume()
+        init()
+    }
 
-        cardsSearchImage?.setOnClickListener { mPresenter.filterByName(cardsSearchEditText?.text.toString())  }
+    private fun init () {
+        cards_search_imageview?.setOnClickListener { mPresenter.filterByName(cards_search_edittext?.text.toString())  }
     }
 
     override fun filterByNameSuccess(cardList: List<Card>) {
-        val cardsRecycler = view?.findViewById<RecyclerView>(R.id.cards_search_recycler)
-        cardsRecycler?.layoutManager = LinearLayoutManager(context)
-        cardsRecycler?.adapter = CardsAdapter(cardList) {
+        cards_search_recycler?.show()
+        cards_instructions_text.hide()
+
+        cards_search_recycler?.layoutManager = LinearLayoutManager(context)
+        val itemDecor = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
+        cards_search_recycler?.addItemDecoration(itemDecor)
+        cards_search_recycler?.adapter = CardsAdapter(cardList) {
             context?.toast("${it.name} Clicked")
         }
 

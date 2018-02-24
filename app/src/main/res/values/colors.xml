@@ -7,4 +7,14 @@
     <color name="black">#000</color>
     <color name="search_background">#E0E0E0</color>
 
+    <!-- Clan colors-->
+    <color name="scorpion_color">#A61600</color>
+    <color name="dragon_color">#00A472</color>
+    <color name="crane_color">#0089DE</color>
+    <color name="lion_color">#CB9D00</color>
+    <color name="unicorn_color">#780098</color>
+    <color name="crab_color">#001C94</color>
+    <color name="phoenix_color">#C16400</color>
+    <color name="neutral_color">#6E6464</color>
+
 </resources>

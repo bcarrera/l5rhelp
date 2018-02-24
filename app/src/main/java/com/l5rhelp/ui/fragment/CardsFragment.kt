@@ -2,6 +2,8 @@ package com.l5rhelp.ui.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +13,10 @@ import android.widget.ImageView
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.CardsModule
 import com.l5rhelp.domain.model.Card
+import com.l5rhelp.ui.adapter.CardsAdapter
 import com.l5rhelp.ui.presenter.CardsPresenter
 import com.l5rhelp.ui.utils.app
+import com.l5rhelp.ui.utils.toast
 import javax.inject.Inject
 
 
@@ -47,6 +51,12 @@ class CardsFragment : Fragment(), CardsPresenter.View {
     }
 
     override fun filterByNameSuccess(cardList: List<Card>) {
+        val cardsRecycler = view?.findViewById<RecyclerView>(R.id.cards_search_recycler)
+        cardsRecycler?.layoutManager = LinearLayoutManager(context)
+        cardsRecycler?.adapter = CardsAdapter(cardList) {
+            context?.toast("${it.name} Clicked")
+        }
+
     }
 
 

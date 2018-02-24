@@ -15,13 +15,11 @@ import com.l5rhelp.dagger.submodules.CardsModule
 import com.l5rhelp.domain.model.Card
 import com.l5rhelp.ui.adapter.CardsAdapter
 import com.l5rhelp.ui.presenter.CardsPresenter
-import com.l5rhelp.ui.utils.app
-import com.l5rhelp.ui.utils.toast
 import javax.inject.Inject
 import android.support.v7.widget.DividerItemDecoration
-import com.l5rhelp.ui.utils.hide
-import com.l5rhelp.ui.utils.show
+import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_cards.*
+import java.io.Serializable
 
 
 class CardsFragment : Fragment(), CardsPresenter.View {
@@ -57,6 +55,11 @@ class CardsFragment : Fragment(), CardsPresenter.View {
         cards_search_recycler?.addItemDecoration(itemDecor)
         cards_search_recycler?.adapter = CardsAdapter(cardList) {
             context?.toast("${it.name} Clicked")
+            val cardDetailFragment = CardDetailFragment()
+            val bundle  = Bundle()
+            bundle.putSerializable("card", it)
+            cardDetailFragment.arguments = bundle
+            activity?.replaceFragmentSafely(cardDetailFragment, cardDetailFragment.javaClass.name, false, R.id.main_content)
         }
 
     }

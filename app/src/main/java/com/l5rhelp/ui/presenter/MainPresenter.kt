@@ -7,9 +7,7 @@ import com.l5rhelp.domain.model.CardsResponse
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
-/**
- * Created by Krupto on 17/02/2018.
- */
+
 class MainPresenter (val view: View,
                      val getAllCardsInteractor: GetAllCardsInteractor,
                      val cardDao: CardDao): GetAllCardsInteractor.Presenter {
@@ -17,13 +15,11 @@ class MainPresenter (val view: View,
     var cardList : List<Card> = emptyList()
 
     fun initPresenter() {
-        //getAllCardsInteractor.getAllCardsInteractor(this)
-        //getAllCardsFromDatabase()
+        getAllCardsFromDatabase()
     }
 
     override fun getAllCardsSuccess(response : CardsResponse?) {
         addAllCards(response?.records)
-        view.initPresenterSuccess()
     }
 
     override fun getAllCardsError() {
@@ -34,7 +30,11 @@ class MainPresenter (val view: View,
         doAsync {
             cardList = cardDao.getAllCards()
             uiThread {
-                getAllCards()
+                if(cardList.isEmpty()){
+                    getAllCardsInteractor.getAllCardsInteractor(it)
+                } else {
+                    view.initPresenterSuccess()
+                }
             }
         }
 
@@ -51,7 +51,7 @@ class MainPresenter (val view: View,
             }
 
             uiThread {
-               val sdfs = ""
+                view.initPresenterSuccess()
             }
         }
     }

@@ -11,5 +11,5 @@ class PackCard (
         val pack: Pack,
         @SerializedName("position") val position: String,
         @SerializedName("quantity") val quantity: Int,
-        @SerializedName("flavor") val flavor: String
+        @SerializedName("flavor") val flavor: String?
 )

@@ -29,8 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         component.inject(this)
 
-        //mPresenter.initPresenter()
-        init()
+        mPresenter.initPresenter()
     }
 
     private fun init () {

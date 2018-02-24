@@ -4,10 +4,11 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import android.arch.persistence.room.TypeConverters
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 @Entity(tableName = "card_table")
 @TypeConverters(PackCardConverter::class, StringConverter::class)
-class Card (
+data class Card  (
         @SerializedName("clan") val clan : String,
         @SerializedName("cost") val cost: Int,
         @SerializedName("deck_limit") val deckLimit: Int,
@@ -27,5 +28,7 @@ class Card (
         @SerializedName("military_bonus") val militaryBonus: String?,
         @SerializedName("political_bonus") val politicalBonus: String?,
         @SerializedName("military") val military: String?,
-        @SerializedName("political") val political: String?
-)
+        @SerializedName("political") val political: String?,
+        @SerializedName("glory") val glory: Int?
+
+) : Serializable

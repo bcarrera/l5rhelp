@@ -25,4 +25,34 @@
     <string name="cards_search_hint">Nombre de la carta</string>
     <string name="cards_search_no_results">No se han encontrado resultados para esa búsqueda</string>
 
+    <!-- Cards Filters-->
+    <string name="cards_filters_title">Filtros para la búsqueda de cartas</string>
+    <string name="cards_filters_clan_title">Elije un clan</string>
+    <string-array name="clan_filter">
+        <item>Scorpion</item>
+        <item>Dragon</item>
+        <item>Phoenix</item>
+        <item>Crab</item>
+        <item>Crane</item>
+        <item>Lion</item>
+        <item>Unicorn</item>
+        <item>Neutral</item>
+    </string-array>
+    <string name="cards_filters_type_title">Elije un tipo</string>
+    <string-array name="type_filter">
+        <item>Attachment</item>
+        <item>Character</item>
+        <item>Event</item>
+        <item>Holding</item>
+        <item>Province</item>
+        <item>Role</item>
+        <item>Stronghold</item>
+    </string-array>
+    <string name="cards_filters_deck_title">Elije un mazo</string>
+    <string-array name="deck_filter">
+        <item>Conflict</item>
+        <item>Dinasty</item>
+    </string-array>
+    <string name="card_filters_button">Aplicar filtros</string>
+
 </resources>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.CardsModule
 import com.l5rhelp.domain.model.Card
@@ -17,10 +18,11 @@ import com.l5rhelp.ui.adapter.CardsAdapter
 import com.l5rhelp.ui.presenter.CardsPresenter
 import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_cards.*
+import org.jetbrains.anko.selector
 import javax.inject.Inject
 
 
-class CardsFragment : Fragment(), CardsPresenter.View {
+class CardsFragment : Fragment(), CardsPresenter.View, FiltersDialog.Listener {
 
     //Dagger
     @Inject lateinit var mPresenter: CardsPresenter
@@ -42,8 +44,11 @@ class CardsFragment : Fragment(), CardsPresenter.View {
 
     private fun init () {
         cards_search_imageview?.setOnClickListener {
-            mPresenter.filterByName(cards_search_edittext?.text.toString())
-            cards_search_imageview.hideKeyboard()
+            //mPresenter.filterByName(cards_search_edittext?.text.toString())
+            //cards_search_imageview.hideKeyboard()
+            val filtersDialog = FiltersDialog(context)
+            filtersDialog.setListener(this)
+            filtersDialog.show()
         }
 
         cards_search_edittext.setOnEditorActionListener { v, actionId, event ->
@@ -57,7 +62,7 @@ class CardsFragment : Fragment(), CardsPresenter.View {
         }
     }
 
-    override fun filterByNameSuccess(cardList: List<Card>) {
+    override fun filterSuccess(cardList: List<Card>) {
         if(cardList.isNotEmpty()){
             cards_search_recycler?.show()
             cards_instructions_text.hide()
@@ -77,6 +82,10 @@ class CardsFragment : Fragment(), CardsPresenter.View {
             cards_instructions_text.text = getString(R.string.cards_search_no_results)
             cards_instructions_text.show()
         }
+    }
+
+    override fun filtersDone(clan : String, type : String, deck : String) {
+        mPresenter.useFilters(clan, type, deck)
     }
 
     override fun showLoading() {

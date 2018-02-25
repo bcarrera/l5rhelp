@@ -17,7 +17,19 @@ class CardsPresenter (val view: CardsPresenter.View,
         doAsync {
             cardList = cardDao.filterByName("%$name%" )
             uiThread {
-                view.filterByNameSuccess(cardList)
+                view.filterSuccess(cardList)
+                view.hideLoading()
+            }
+        }
+    }
+
+    fun useFilters (clan : String, type : String, deck : String) {
+        view.showLoading()
+
+        doAsync {
+            cardList = cardDao.useFilters(clan.toLowerCase(), type.toLowerCase(), deck.toLowerCase())
+            uiThread {
+                view.filterSuccess(cardList)
                 view.hideLoading()
             }
         }
@@ -26,6 +38,6 @@ class CardsPresenter (val view: CardsPresenter.View,
     interface View {
         fun showLoading()
         fun hideLoading()
-        fun filterByNameSuccess(cardList : List<Card>)
+        fun filterSuccess(cardList : List<Card>)
     }
 }

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.MainModule
+import com.l5rhelp.ui.fragment.CardDetailFragment
 import com.l5rhelp.ui.fragment.CardsFragment
 import com.l5rhelp.ui.fragment.RulesFragment
 import com.l5rhelp.ui.fragment.SettingsFragment
@@ -50,14 +51,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
+
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            alert (getString(R.string.main_exit_text)) {
-                title = getString(R.string.main_exit_title)
-                positiveButton (getString(R.string.main_exit_yes)) { super.onBackPressed() }
-                negativeButton (getString(R.string.main_exit_no)) { it.dismiss() }
-            }.show()
+
+            val fragmentManager = supportFragmentManager
+            val f = fragmentManager.findFragmentById(R.id.main_content)
+
+            if (f is CardDetailFragment) {
+                super.onBackPressed()
+            } else {
+                alert (getString(R.string.main_exit_text)) {
+                    title = getString(R.string.main_exit_title)
+                    positiveButton (getString(R.string.main_exit_yes)) { super.onBackPressed() }
+                    negativeButton (getString(R.string.main_exit_no)) { it.dismiss() }
+                }.show()
+            }
         }
     }
 

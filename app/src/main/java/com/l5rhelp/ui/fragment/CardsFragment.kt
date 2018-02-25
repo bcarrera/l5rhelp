@@ -17,9 +17,15 @@ import com.l5rhelp.ui.adapter.CardsAdapter
 import com.l5rhelp.ui.presenter.CardsPresenter
 import javax.inject.Inject
 import android.support.v7.widget.DividerItemDecoration
+import android.view.KeyEvent
 import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_cards.*
 import java.io.Serializable
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView
+import android.widget.TextView.OnEditorActionListener
+
+
 
 
 class CardsFragment : Fragment(), CardsPresenter.View {
@@ -47,6 +53,16 @@ class CardsFragment : Fragment(), CardsPresenter.View {
             mPresenter.filterByName(cards_search_edittext?.text.toString())
             cards_search_imageview.hideKeyboard()
         }
+
+        cards_search_edittext.setOnEditorActionListener { v, actionId, event ->
+            var handled = false
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                mPresenter.filterByName(cards_search_edittext?.text.toString())
+                cards_search_imageview.hideKeyboard()
+                handled = true
+            }
+            handled
+        }
     }
 
     override fun filterByNameSuccess(cardList: List<Card>) {
@@ -58,12 +74,11 @@ class CardsFragment : Fragment(), CardsPresenter.View {
             val itemDecor = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
             cards_search_recycler?.addItemDecoration(itemDecor)
             cards_search_recycler?.adapter = CardsAdapter(cardList) {
-                context?.toast("${it.name} Clicked")
                 val cardDetailFragment = CardDetailFragment()
                 val bundle  = Bundle()
                 bundle.putSerializable("card", it)
                 cardDetailFragment.arguments = bundle
-                activity?.replaceFragmentSafely(cardDetailFragment, cardDetailFragment.javaClass.name, false, R.id.main_content)
+                activity?.addFragment(cardDetailFragment, cardDetailFragment.javaClass.name, R.id.main_content)
             }
         } else {
             cards_search_recycler?.hide()

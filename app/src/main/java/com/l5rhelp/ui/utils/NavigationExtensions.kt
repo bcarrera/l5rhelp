@@ -68,3 +68,20 @@ fun FragmentActivity.replaceFragmentSafely(fragment: Fragment,
         ft.commitAllowingStateLoss()
     }
 }
+
+fun FragmentActivity.addFragment(fragment: Fragment,
+                                           tag: String,
+                                           @IdRes containerViewId: Int
+        //@AnimRes enterAnimation: Int = 0,
+        //@AnimRes exitAnimation: Int = 0,
+        //@AnimRes popEnterAnimation: Int = 0,
+        //@AnimRes popExitAnimation: Int = 0
+) {
+    supportFragmentManager
+            .beginTransaction()
+            //.setCustomAnimations(enterAnimation, exitAnimation, popEnterAnimation, popExitAnimation)
+            .add(containerViewId, fragment, tag)
+            .addToBackStack(tag)
+            .commit()
+
+}

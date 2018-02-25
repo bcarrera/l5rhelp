@@ -26,8 +26,8 @@ class CardDetailFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_card_detail, container, false)
     }
 
-    override fun onResume() {
-        super.onResume()
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         if(Utils.hasNetworkConnection(context)) {
             initImage(arguments?.getSerializable("card") as Card)
         } else {

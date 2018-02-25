@@ -43,11 +43,12 @@
         android:text="@string/cards_intructions"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cards_search_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
 </LinearLayout>

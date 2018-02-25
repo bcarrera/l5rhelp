@@ -37,30 +37,40 @@ class CardsFragment : Fragment(), CardsPresenter.View {
         return v
     }
 
-    override fun onResume() {
-        super.onResume()
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         init()
     }
 
     private fun init () {
-        cards_search_imageview?.setOnClickListener { mPresenter.filterByName(cards_search_edittext?.text.toString())  }
+        cards_search_imageview?.setOnClickListener {
+            mPresenter.filterByName(cards_search_edittext?.text.toString())
+            cards_search_imageview.hideKeyboard()
+        }
     }
 
     override fun filterByNameSuccess(cardList: List<Card>) {
-        cards_search_recycler?.show()
-        cards_instructions_text.hide()
+        if(cardList.isNotEmpty()){
+            cards_search_recycler?.show()
+            cards_instructions_text.hide()
 
-        cards_search_recycler?.layoutManager = LinearLayoutManager(context)
-        val itemDecor = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
-        cards_search_recycler?.addItemDecoration(itemDecor)
-        cards_search_recycler?.adapter = CardsAdapter(cardList) {
-            context?.toast("${it.name} Clicked")
-            val cardDetailFragment = CardDetailFragment()
-            val bundle  = Bundle()
-            bundle.putSerializable("card", it)
-            cardDetailFragment.arguments = bundle
-            activity?.replaceFragmentSafely(cardDetailFragment, cardDetailFragment.javaClass.name, false, R.id.main_content)
+            cards_search_recycler?.layoutManager = LinearLayoutManager(context)
+            val itemDecor = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
+            cards_search_recycler?.addItemDecoration(itemDecor)
+            cards_search_recycler?.adapter = CardsAdapter(cardList) {
+                context?.toast("${it.name} Clicked")
+                val cardDetailFragment = CardDetailFragment()
+                val bundle  = Bundle()
+                bundle.putSerializable("card", it)
+                cardDetailFragment.arguments = bundle
+                activity?.replaceFragmentSafely(cardDetailFragment, cardDetailFragment.javaClass.name, false, R.id.main_content)
+            }
+        } else {
+            cards_search_recycler?.hide()
+            cards_instructions_text.text = getString(R.string.cards_search_no_results)
+            cards_instructions_text.show()
         }
+
 
     }
 

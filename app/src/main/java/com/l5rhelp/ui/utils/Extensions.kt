@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.Toast
 import com.l5rhelp.base.App
+import com.l5rhelp.ui.activity.MainActivity
 import com.squareup.picasso.Picasso
 
 fun Context.toast(message: String) {

@@ -15,6 +15,7 @@ class MainPresenter (val view: View,
     var cardList : List<Card> = emptyList()
 
     fun initPresenter() {
+        view.showLoading()
         getAllCardsFromDatabase()
     }
 
@@ -33,6 +34,7 @@ class MainPresenter (val view: View,
                 if(cardList.isEmpty()){
                     getAllCardsInteractor.getAllCardsInteractor(it)
                 } else {
+                    view.hideLoading()
                     view.initPresenterSuccess()
                 }
             }
@@ -51,14 +53,15 @@ class MainPresenter (val view: View,
             }
 
             uiThread {
+                view.hideLoading()
                 view.initPresenterSuccess()
             }
         }
     }
 
     interface View {
-        fun showProgress()
-        fun hideProgress()
+        fun showLoading()
+        fun hideLoading()
         fun initPresenterSuccess()
     }
 }

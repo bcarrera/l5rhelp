@@ -1,10 +1,16 @@
 <resources>
-    <string name="app_name">L5R Help</string>
 
+    <string name="app_name">L5R Help</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+
+    <!-- Main activity -->
+    <string name="main_exit_text">¿Quieres salir de la aplicación?</string>
+    <string name="main_exit_title">L5R Help</string>
+    <string name="main_exit_yes">Aceptar</string>
+    <string name="main_exit_no">Cancelar</string>
+    <string name="main_loading">Cargando</string>
 
     <!-- Left Menu -->
     <string name="left_menu_title1">L5R Help</string>

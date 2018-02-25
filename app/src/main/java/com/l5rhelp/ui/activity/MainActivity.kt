@@ -1,5 +1,6 @@
 package com.l5rhelp.ui.activity
 
+import android.app.Dialog
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -15,10 +16,15 @@ import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
 import com.l5rhelp.ui.utils.replaceFragmentSafely
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.indeterminateProgressDialog
+import org.jetbrains.anko.noButton
+import org.jetbrains.anko.yesButton
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, MainPresenter.View {
 
+    private lateinit var dialog : Dialog
 
     //Dagger
     @Inject lateinit var mPresenter: MainPresenter
@@ -28,6 +34,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         component.inject(this)
+
+        dialog = indeterminateProgressDialog (message = getString(R.string.main_loading))
+        dialog.setCanceledOnTouchOutside(false)
 
         mPresenter.initPresenter()
     }
@@ -44,7 +53,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            super.onBackPressed()
+            alert (getString(R.string.main_exit_text)) {
+                title = getString(R.string.main_exit_title)
+                positiveButton (getString(R.string.main_exit_yes)) { super.onBackPressed() }
+                negativeButton (getString(R.string.main_exit_no)) { it.dismiss() }
+            }.show()
         }
     }
 
@@ -74,12 +87,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         init()
     }
 
-    override fun showProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun showLoading() {
+        dialog.show()
     }
 
-    override fun hideProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun hideLoading() {
+        dialog.dismiss()
     }
 
 }

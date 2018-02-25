@@ -2,30 +2,22 @@ package com.l5rhelp.ui.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageView
-
+import android.view.inputmethod.EditorInfo
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.CardsModule
 import com.l5rhelp.domain.model.Card
+import com.l5rhelp.ui.activity.MainActivity
+import com.l5rhelp.ui.activity.MainActivity_MembersInjector
 import com.l5rhelp.ui.adapter.CardsAdapter
 import com.l5rhelp.ui.presenter.CardsPresenter
-import javax.inject.Inject
-import android.support.v7.widget.DividerItemDecoration
-import android.view.KeyEvent
 import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_cards.*
-import java.io.Serializable
-import android.view.inputmethod.EditorInfo
-import android.widget.TextView
-import android.widget.TextView.OnEditorActionListener
-
-
+import javax.inject.Inject
 
 
 class CardsFragment : Fragment(), CardsPresenter.View {
@@ -85,9 +77,14 @@ class CardsFragment : Fragment(), CardsPresenter.View {
             cards_instructions_text.text = getString(R.string.cards_search_no_results)
             cards_instructions_text.show()
         }
-
-
     }
 
+    override fun showLoading() {
+        (activity as MainActivity).showLoading()
+    }
+
+    override fun hideLoading() {
+        (activity as MainActivity).hideLoading()
+    }
 
 }

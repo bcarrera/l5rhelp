@@ -15,8 +15,8 @@ interface CardDao {
     @Query("SELECT * FROM card_table WHERE name LIKE :name")
     fun filterByName(name : String): MutableList<Card>
 
-    @Query("SELECT * FROM card_table WHERE clan LIKE :clan AND type LIKE :type AND side LIKE :deck")
-    fun useFilters(clan : String, type : String, deck : String): MutableList<Card>
+    @Query("SELECT * FROM card_table WHERE clan IN (:clanFilters)")
+    fun useFilters(clanFilters : List<String>): MutableList<Card>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCard(card: Card)

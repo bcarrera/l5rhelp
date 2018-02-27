@@ -1,5 +1,6 @@
 package com.l5rhelp.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DividerItemDecoration
@@ -8,21 +9,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Toast
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.CardsModule
 import com.l5rhelp.domain.model.Card
 import com.l5rhelp.ui.activity.MainActivity
-import com.l5rhelp.ui.activity.MainActivity_MembersInjector
 import com.l5rhelp.ui.adapter.CardsAdapter
 import com.l5rhelp.ui.presenter.CardsPresenter
 import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_cards.*
-import org.jetbrains.anko.selector
 import javax.inject.Inject
 
 
-class CardsFragment : Fragment(), CardsPresenter.View, FiltersDialog.Listener {
+class CardsFragment : Fragment(), CardsPresenter.View {
+
+    var filtersList : List<String> = emptyList()
 
     //Dagger
     @Inject lateinit var mPresenter: CardsPresenter
@@ -40,15 +40,14 @@ class CardsFragment : Fragment(), CardsPresenter.View, FiltersDialog.Listener {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         init()
+        if(filtersList.isNotEmpty()) mPresenter.useFilters(filtersList)
     }
 
     private fun init () {
         cards_search_imageview?.setOnClickListener {
             //mPresenter.filterByName(cards_search_edittext?.text.toString())
             //cards_search_imageview.hideKeyboard()
-            val filtersDialog = FiltersDialog(context)
-            filtersDialog.setListener(this)
-            filtersDialog.show()
+            activity?.replaceFragmentSafely(CardsFilterFragment(), "CardsFilterFragment", false, R.id.main_content)
         }
 
         cards_search_edittext.setOnEditorActionListener { v, actionId, event ->
@@ -84,8 +83,8 @@ class CardsFragment : Fragment(), CardsPresenter.View, FiltersDialog.Listener {
         }
     }
 
-    override fun filtersDone(clan : String, type : String, deck : String) {
-        mPresenter.useFilters(clan, type, deck)
+    fun setFilters (filtersList: List<String>) {
+        this.filtersList = filtersList
     }
 
     override fun showLoading() {

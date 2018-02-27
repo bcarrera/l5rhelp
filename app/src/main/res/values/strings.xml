@@ -1,9 +1,21 @@
 <resources>
 
+    <!-- App -->
     <string name="app_name">L5R Help</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Common -->
+    <string name="scorpion">Scorpion</string>
+    <string name="dragon">Dragon</string>
+    <string name="phoenix">Phoenix</string>
+    <string name="unicorn">Unicorn</string>
+    <string name="crane">Crane</string>
+    <string name="crab">Crab</string>
+    <string name="lion">Lion</string>
+    <string name="neutral">Neutral</string>
+
 
     <!-- Main activity -->
     <string name="main_exit_text">¿Quieres salir de la aplicación?</string>
@@ -26,19 +38,10 @@
     <string name="cards_search_no_results">No se han encontrado resultados para esa búsqueda</string>
 
     <!-- Cards Filters-->
+    <string name="cards_filters_hint">Pulsa aquí para añadir filtros</string>
     <string name="cards_filters_title">Filtros para la búsqueda de cartas</string>
-    <string name="cards_filters_clan_title">Elije un clan</string>
-    <string-array name="clan_filter">
-        <item>Scorpion</item>
-        <item>Dragon</item>
-        <item>Phoenix</item>
-        <item>Crab</item>
-        <item>Crane</item>
-        <item>Lion</item>
-        <item>Unicorn</item>
-        <item>Neutral</item>
-    </string-array>
-    <string name="cards_filters_type_title">Elije un tipo</string>
+    <string name="cards_filters_clan_title">Clanes</string>
+    <string name="cards_filters_type_title">Tipo de carta</string>
     <string-array name="type_filter">
         <item>Attachment</item>
         <item>Character</item>
@@ -48,11 +51,13 @@
         <item>Role</item>
         <item>Stronghold</item>
     </string-array>
-    <string name="cards_filters_deck_title">Elije un mazo</string>
+    <string name="cards_filters_deck_title">Tipo de mazo</string>
     <string-array name="deck_filter">
         <item>Conflict</item>
         <item>Dinasty</item>
     </string-array>
     <string name="card_filters_button">Aplicar filtros</string>
+    <string name="title_activity_cards_filter">CardsFilterActivity</string>
+    <string name="cards_filters_selection_button">Aceptar</string>
 
 </resources>

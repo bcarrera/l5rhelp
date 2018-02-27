@@ -1,68 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/cards_filters_clans_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/cards_filters_title"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cards_filters_selection_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/cards_filters_clan_title"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <CheckBox
+            android:id="@+id/clan_crab_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crab" />
 
-    <Spinner
-        android:id="@+id/cards_filters_clan_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:entries="@array/clan_filter" />
+        <CheckBox
+            android:id="@+id/clan_crane_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crane" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/cards_filters_type_title"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <CheckBox
+            android:id="@+id/clan_dragon_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dragon" />
 
-    <Spinner
-        android:id="@+id/cards_filters_type_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:entries="@array/type_filter" />
+        <CheckBox
+            android:id="@+id/clan_lion_checkbob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lion" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/cards_filters_deck_title"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <CheckBox
+            android:id="@+id/clan_phoenix_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phoenix" />
 
-    <Spinner
-        android:id="@+id/cards_filters_deck_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:entries="@array/deck_filter" />
+        <CheckBox
+            android:id="@+id/clan_scorpion_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scorpion" />
+
+        <CheckBox
+            android:id="@+id/clan_unicorn_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unicorn" />
+
+        <CheckBox
+            android:id="@+id/clan_neutral_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/neutral" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/cards_filters_button"
-        android:layout_width="match_parent"
+        android:id="@+id/cards_filters_selection_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/card_filters_button" />
-</LinearLayout>
+        android:text="@string/cards_filters_selection_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

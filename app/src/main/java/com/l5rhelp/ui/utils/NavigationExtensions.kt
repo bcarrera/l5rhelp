@@ -61,7 +61,6 @@ fun FragmentActivity.replaceFragmentSafely(fragment: Fragment,
             .beginTransaction()
             //.setCustomAnimations(enterAnimation, exitAnimation, popEnterAnimation, popExitAnimation)
             .replace(containerViewId, fragment, tag)
-            .addToBackStack(tag)
     if (!supportFragmentManager.isStateSaved) {
         ft.commit()
     } else if (allowStateLoss) {

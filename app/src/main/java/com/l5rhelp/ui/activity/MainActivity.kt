@@ -8,10 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.MainModule
-import com.l5rhelp.ui.fragment.CardDetailFragment
-import com.l5rhelp.ui.fragment.CardsFragment
-import com.l5rhelp.ui.fragment.RulesFragment
-import com.l5rhelp.ui.fragment.SettingsFragment
+import com.l5rhelp.ui.fragment.*
 import com.l5rhelp.ui.presenter.MainPresenter
 import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
@@ -59,7 +56,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val fragmentManager = supportFragmentManager
             val f = fragmentManager.findFragmentById(R.id.main_content)
 
-            if (f is CardDetailFragment) {
+            if (f is CardDetailFragment || f is CardsFilterFragment) {
                 super.onBackPressed()
             } else {
                 alert (getString(R.string.main_exit_text)) {

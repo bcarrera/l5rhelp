@@ -27,4 +27,6 @@ import javax.inject.Singleton
             Room.databaseBuilder(context, L5RHelpDatabase::class.java, "l5rHelp-db").build()
 
     @Provides fun providesCardDao(database: L5RHelpDatabase) = database.cardDao()
+
+    @Provides fun providesRulingDao(database: L5RHelpDatabase) = database.rulingDao()
 }

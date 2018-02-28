@@ -38,7 +38,11 @@ class CardDetailFragment : Fragment() {
     fun initImage (card : Card) {
         card_detail_text_info_layout.hide()
         card_detail_image.show()
-        card_detail_image.loadUrl(card.packCards.get(0).imageUrl)
+        if(card.packCards[0].imageUrl.isNullOrEmpty()) {
+            card_detail_image.loadUrl(card.packCards[1].imageUrl)
+        } else {
+            card_detail_image.loadUrl(card.packCards[0].imageUrl)
+        }
     }
 
     fun initTextInfo (card : Card) {

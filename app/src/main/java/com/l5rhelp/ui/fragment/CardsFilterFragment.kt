@@ -14,7 +14,9 @@ import kotlinx.android.synthetic.main.activity_cards_filter.*
 
 class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
 
-    var clanFiltersList : List<String> = emptyList()
+    var clanFiltersList : MutableList<String> = mutableListOf()
+    var typeFiltersList : MutableList<String> = mutableListOf()
+    var deckFiltersList : MutableList<String> = mutableListOf()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -26,10 +28,14 @@ class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         init()
     }
 
     fun init () {
+        clanFiltersList = context?.resources?.getStringArray(R.array.clan_filter)!!.toMutableList()
+        typeFiltersList = context?.resources?.getStringArray(R.array.type_filter)!!.toMutableList()
+        deckFiltersList = context?.resources?.getStringArray(R.array.deck_filter)!!.toMutableList()
 
         cards_filters_clan_layout.setOnClickListener {
             val clanFilterDialog = FiltersDialog(context, CardsSearchFilters.CLAN)
@@ -37,15 +43,27 @@ class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
             clanFilterDialog.show()
         }
 
+        cards_filters_type_layout.setOnClickListener {
+            val clanFilterDialog = FiltersDialog(context, CardsSearchFilters.TYPE)
+            clanFilterDialog.setListener(this)
+            clanFilterDialog.show()
+        }
+
+        cards_filters_deck_layout.setOnClickListener {
+            val clanFilterDialog = FiltersDialog(context, CardsSearchFilters.DECK)
+            clanFilterDialog.setListener(this)
+            clanFilterDialog.show()
+        }
+
         cards_filters_button.setOnClickListener {
             val cardsFragment = CardsFragment()
-            cardsFragment.setFilters(clanFiltersList)
+            cardsFragment.setFilters(clanFiltersList, typeFiltersList, deckFiltersList)
             activity?.replaceFragmentSafely(cardsFragment, "CardsFragment", false, R.id.main_content)
         }
 
     }
 
-    override fun filtersDone(filtersList: List<String>, filterType: CardsSearchFilters) {
+    override fun filtersDone(filtersList: MutableList<String>, filterType: CardsSearchFilters) {
         when(filterType) {
             CardsSearchFilters.CLAN -> {
                 val  clansBuffer  = StringBuffer()
@@ -53,10 +71,28 @@ class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
                     clansBuffer.append(item.capitalize()).append(" ")
                 }
                 cards_filters_clan_selection.text = clansBuffer.toString()
+                clanFiltersList.clear()
                 clanFiltersList = filtersList
             }
-            CardsSearchFilters.TYPE -> TODO()
-            CardsSearchFilters.DECK -> TODO()
+            CardsSearchFilters.TYPE ->{
+                val  clansBuffer  = StringBuffer()
+                for (item in filtersList){
+                    clansBuffer.append(item.capitalize()).append(" ")
+                }
+                cards_filters_type_selection.text = clansBuffer.toString()
+                typeFiltersList.clear()
+                typeFiltersList = filtersList
+            }
+
+            CardsSearchFilters.DECK ->{
+            val  clansBuffer  = StringBuffer()
+            for (item in filtersList){
+                clansBuffer.append(item.capitalize()).append(" ")
+            }
+            cards_filters_deck_selection.text = clansBuffer.toString()
+            deckFiltersList.clear()
+            deckFiltersList = filtersList
+        }
             CardsSearchFilters.PACK -> TODO()
         }
     }

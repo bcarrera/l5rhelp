@@ -9,7 +9,7 @@ import org.jetbrains.anko.uiThread
 class CardsPresenter (val view: CardsPresenter.View,
                       val cardDao : CardDao) {
 
-    var cardList : List<Card> = emptyList()
+    private var cardList : List<Card> = emptyList()
 
     fun filterByName (name : String) {
         view.showLoading()
@@ -23,11 +23,11 @@ class CardsPresenter (val view: CardsPresenter.View,
         }
     }
 
-    fun useFilters (clanFilters : List<String>) {
+    fun useFilters (clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>) {
         view.showLoading()
 
         doAsync {
-            cardList = cardDao.useFilters(clanFilters)
+            cardList = cardDao.useFilters(clanFilters, typeFilters, deckFilters)
             uiThread {
                 view.filterSuccess(cardList)
                 view.hideLoading()

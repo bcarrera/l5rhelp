@@ -1,12 +1,9 @@
 package com.l5rhelp.ui.utils
 
-import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import com.l5rhelp.R
-import com.l5rhelp.ui.fragment.CardsFragment
-import kotlinx.android.synthetic.main.activity_cards_filter.*
 import kotlinx.android.synthetic.main.filters_dialog.*
 
 
@@ -21,10 +18,20 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
 
         when(type){
             CardsSearchFilters.CLAN -> {
-                cards_filters_clans_layout.show()
+                cards_filters_type_checkboxes.hide()
+                cards_filters_deck_checkboxes.hide()
+                cards_filters_clans_checkboxes.show()
             }
-            CardsSearchFilters.TYPE -> TODO()
-            CardsSearchFilters.DECK -> TODO()
+            CardsSearchFilters.TYPE -> {
+                cards_filters_deck_checkboxes.hide()
+                cards_filters_clans_checkboxes.hide()
+                cards_filters_type_checkboxes.show()
+            }
+            CardsSearchFilters.DECK -> {
+                cards_filters_type_checkboxes.hide()
+                cards_filters_clans_checkboxes.hide()
+                cards_filters_deck_checkboxes.show()
+            }
             CardsSearchFilters.PACK -> TODO()
         }
 
@@ -43,8 +50,25 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                     mListener.filtersDone(selectedFiltersList, CardsSearchFilters.CLAN)
                     dismiss()
                 }
-                CardsSearchFilters.TYPE -> TODO()
-                CardsSearchFilters.DECK -> TODO()
+                CardsSearchFilters.TYPE -> {
+                    if(type_attachment_checkbox.isChecked) selectedFiltersList.add(type_attachment_checkbox.text.toString().toLowerCase())
+                    if(type_character_checkbox.isChecked) selectedFiltersList.add(type_character_checkbox.text.toString().toLowerCase())
+                    if(type_event_checkbox.isChecked) selectedFiltersList.add(type_event_checkbox.text.toString().toLowerCase())
+                    if(type_holding_checkbox.isChecked) selectedFiltersList.add(type_holding_checkbox.text.toString().toLowerCase())
+                    if(type_province_checkbox.isChecked) selectedFiltersList.add(type_province_checkbox.text.toString().toLowerCase())
+                    if(type_role_checkbox.isChecked) selectedFiltersList.add(type_role_checkbox.text.toString().toLowerCase())
+                    if(type_stronghold_checkbox.isChecked) selectedFiltersList.add(type_stronghold_checkbox.text.toString().toLowerCase())
+
+                    mListener.filtersDone(selectedFiltersList, CardsSearchFilters.TYPE)
+                    dismiss()
+                }
+                CardsSearchFilters.DECK -> {
+                    if(deck_conflict_checkbox.isChecked) selectedFiltersList.add(deck_conflict_checkbox.text.toString().toLowerCase())
+                    if(deck_dinasty_checkbox.isChecked) selectedFiltersList.add(deck_dinasty_checkbox.text.toString().toLowerCase())
+
+                    mListener.filtersDone(selectedFiltersList, CardsSearchFilters.DECK)
+                    dismiss()
+                }
                 CardsSearchFilters.PACK -> TODO()
             }
         }
@@ -55,6 +79,6 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
     }
 
     interface Listener {
-        fun filtersDone(filtersList : List<String>, filterType : CardsSearchFilters)
+        fun filtersDone(filtersList : MutableList<String>, filterType : CardsSearchFilters)
     }
 }

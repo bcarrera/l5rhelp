@@ -16,6 +16,16 @@
     <string name="lion">Lion</string>
     <string name="neutral">Neutral</string>
 
+    <string name="attachment">Attachment</string>
+    <string name="character">Character</string>
+    <string name="event">Event</string>
+    <string name="holding">Holding</string>
+    <string name="province">Province</string>
+    <string name="role">Role</string>
+    <string name="stronghold">Stronghold</string>
+
+    <string name="conflict">Conflict</string>
+    <string name="dinasty">Dynasty</string>
 
     <!-- Main activity -->
     <string name="main_exit_text">¿Quieres salir de la aplicación?</string>
@@ -38,23 +48,35 @@
     <string name="cards_search_no_results">No se han encontrado resultados para esa búsqueda</string>
 
     <!-- Cards Filters-->
-    <string name="cards_filters_hint">Pulsa aquí para añadir filtros</string>
+    <string name="cards_filters_hint">Todos</string>
     <string name="cards_filters_title">Filtros para la búsqueda de cartas</string>
     <string name="cards_filters_clan_title">Clanes</string>
+    <string-array name="clan_filter">
+        <item>scorpion</item>
+        <item>dragon</item>
+        <item>phoenix</item>
+        <item>crab</item>
+        <item>crane</item>
+        <item>lion</item>
+        <item>unicorn</item>
+        <item>neutral</item>
+    </string-array>
     <string name="cards_filters_type_title">Tipo de carta</string>
     <string-array name="type_filter">
-        <item>Attachment</item>
-        <item>Character</item>
-        <item>Event</item>
-        <item>Holding</item>
-        <item>Province</item>
-        <item>Role</item>
-        <item>Stronghold</item>
+        <item>attachment</item>
+        <item>character</item>
+        <item>event</item>
+        <item>holding</item>
+        <item>province</item>
+        <item>role</item>
+        <item>stronghold</item>
     </string-array>
     <string name="cards_filters_deck_title">Tipo de mazo</string>
     <string-array name="deck_filter">
-        <item>Conflict</item>
-        <item>Dinasty</item>
+        <item>conflict</item>
+        <item>dynasty</item>
+        <item>province</item>
+        <item>role</item>
     </string-array>
     <string name="card_filters_button">Aplicar filtros</string>
     <string name="title_activity_cards_filter">CardsFilterActivity</string>

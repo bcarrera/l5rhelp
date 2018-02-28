@@ -11,8 +11,13 @@
   <component name="ChangeListManager">
     <list default="true" id="374dc73c-ce13-4ed0-94b0-d6baec0bbc7e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,8 +57,8 @@
       <file leaf-file-name="CardsFilterFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="416">
+              <caret line="35" column="99" lean-forward="false" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
               <folding>
                 <element signature="e#33#409#0" expanded="true" />
               </folding>
@@ -61,58 +66,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.0.2/659085cb974e7ec1f25451d23f11578332ea0d7e/support-fragment-27.0.2-sources.jar!/android/support/v4/app/FragmentActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2159">
-              <caret line="170" column="16" lean-forward="false" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="FiltersDialog.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardsFragment.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            <state relative-caret-position="536">
+              <caret line="68" column="86" lean-forward="false" selection-start-line="68" selection-start-column="86" selection-end-line="68" selection-end-column="86" />
               <folding>
-                <element signature="e#33#720#0" expanded="true" />
-                <marker date="1519766736032" expanded="false" signature="3108:3151" ph="&quot;No se han encontrado resultados para esa búsqueda&quot;" />
+                <element signature="e#30#187#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavigationExtensions.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt">
+      <file leaf-file-name="filters_dialog.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="455">
+              <caret line="167" column="46" lean-forward="false" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
+              <folding>
+                <element signature="e#2541#2558#0" expanded="true" />
+                <element signature="e#3503#3523#0" expanded="true" />
+                <element signature="e#3757#3776#0" expanded="true" />
+                <element signature="e#4006#4021#0" expanded="true" />
+                <element signature="e#4253#4270#0" expanded="true" />
+                <element signature="e#4750#4764#0" expanded="true" />
+                <element signature="e#4999#5019#0" expanded="true" />
+                <element signature="e#5713#5731#0" expanded="true" />
+                <element signature="e#5963#5980#0" expanded="true" />
+                <element signature="e#6460#6474#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsFragment.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#33#720#0" expanded="true" />
+                <marker date="1519845956671" expanded="false" signature="3324:3367" ph="&quot;No se han encontrado resultados para esa búsqueda&quot;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,52 +137,32 @@
       </file>
       <file leaf-file-name="activity_cards_filter.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-              <folding>
-                <marker date="1519766736033" expanded="true" signature="270:562" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="578:830" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="850:1581" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="1134:1384" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="1405:1561" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="1597:1849" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="1869:2600" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="2153:2403" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="2424:2580" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="2616:2868" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="2888:3619" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="3172:3422" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="3443:3599" ph="..." />
-                <marker date="1519766736033" expanded="true" signature="3633:3862" ph="..." />
-              </folding>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
+          <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_card_detail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_card_detail.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="28" />
-              <folding>
-                <marker date="1519568270710" expanded="true" signature="1325:5436" ph="..." />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardsPresenter.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CardsPresenter.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+            <state relative-caret-position="476">
+              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardDao.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -2121,19 +2109,19 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/CardsSearchFilters.kt" />
         <option value="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/l5rhelp/data/CardDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml" />
       </list>
     </option>
   </component>
@@ -2213,7 +2201,7 @@
     <property name="settings.editor.selected.configurable" value="instant.run" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="bc7b8c1" />
-    <property name="SearchEverywhereHistoryKey" value="extensi&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;carddeta&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/fragment_card_detail.xml&#10;aina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;android&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml&#10;filtea&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterActivity.kt&#10;mainac&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;navigation&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;naviga&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;extens&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;cardsfr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;strings&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;filter_dia&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/filters_dialog.xml&#10;main&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;card&#9;null&#9;null&#10;fr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;exten&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;STRING&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;cardfr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;adap&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt&#10;carada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt&#10;maina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;fragment&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;extension&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;AC&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/activity_main.xml&#10;main_&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/menu/activity_main_drawer.xml&#10;exte&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;color&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/colors.xml&#10;cardsf&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;colors&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/colors.xml&#10;gradle&#9;ACTION&#9;ActivateGradleToolWindow&#10;androidmanife&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml" />
+    <property name="SearchEverywhereHistoryKey" value="string&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;extensi&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;carddeta&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/fragment_card_detail.xml&#10;aina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;android&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml&#10;filtea&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterActivity.kt&#10;mainac&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;navigation&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;naviga&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;extens&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;cardsfr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;strings&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;filter_dia&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/filters_dialog.xml&#10;main&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;card&#9;null&#9;null&#10;fr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;exten&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;STRING&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;cardfr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;adap&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt&#10;carada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt&#10;maina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;fragment&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;extension&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;AC&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/activity_main.xml&#10;main_&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/menu/activity_main_drawer.xml&#10;exte&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;color&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/colors.xml&#10;cardsf&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;colors&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/colors.xml&#10;gradle&#9;ACTION&#9;ActivateGradleToolWindow&#10;androidmanife&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml" />
     <property name="DEBUGGABLE_DEVICE" value="zuk-zuk_z2131-bc7b8c1" />
     <property name="DEBUGGABLE_PROCESS" value="com.l5rhelp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2329,7 +2317,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519767107401" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519849728268" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2376,7 +2365,8 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519767107401" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519849728268" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2557,7 +2547,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519849728269" />
+      </method>
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
@@ -2609,10 +2602,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.035634745" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40311804" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2631,9 +2625,18 @@
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2642,33 +2645,20 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt</url>
-          <line>64</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt</url>
+          <line>31</line>
           <properties />
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="94" />
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="95" />
+      <option name="time" value="99" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/content/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="554" column="24" lean-forward="false" selection-start-line="554" selection-start-column="24" selection-end-line="554" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -2907,14 +2897,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_cards_filter.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.0.2/659085cb974e7ec1f25451d23f11578332ea0d7e/support-fragment-27.0.2-sources.jar!/android/support/v4/app/Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -2933,41 +2915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-729">
           <caret line="5664" column="11" lean-forward="false" selection-start-line="5664" selection-start-column="11" selection-end-line="5664" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2995,32 +2942,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <marker date="1519766736033" expanded="true" signature="270:562" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="578:830" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="850:1581" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="1134:1384" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="1405:1561" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="1597:1849" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="1869:2600" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="2153:2403" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="2424:2580" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="2616:2868" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="2888:3619" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="3172:3422" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="3443:3599" ph="..." />
-            <marker date="1519766736033" expanded="true" signature="3633:3862" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -3029,40 +2950,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/795e111c612ba96d0175f5705291228ca8167dc8/kotlin-stdlib-1.2.21-sources.jar!/generated/_Arrays.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="13003" column="28" lean-forward="false" selection-start-line="13003" selection-start-column="28" selection-end-line="13003" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.0.2/659085cb974e7ec1f25451d23f11578332ea0d7e/support-fragment-27.0.2-sources.jar!/android/support/v4/app/FragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
+        <state relative-caret-position="17">
           <caret line="170" column="16" lean-forward="false" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/FiltersDialog.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="68" column="86" lean-forward="false" selection-start-line="68" selection-start-column="86" selection-end-line="68" selection-end-column="86" />
+          <folding>
+            <element signature="e#30#187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="416">
+          <caret line="35" column="99" lean-forward="false" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
           <folding>
             <element signature="e#33#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+        <state relative-caret-position="212">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#33#720#0" expanded="true" />
+            <marker date="1519845956671" expanded="false" signature="3324:3367" ph="&quot;No se han encontrado resultados para esa búsqueda&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="455">
+          <caret line="167" column="46" lean-forward="false" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
           <folding>
-            <element signature="e#33#720#0" expanded="true" />
-            <marker date="1519766736032" expanded="false" signature="3108:3151" ph="&quot;No se han encontrado resultados para esa búsqueda&quot;" />
+            <element signature="e#2541#2558#0" expanded="true" />
+            <element signature="e#3503#3523#0" expanded="true" />
+            <element signature="e#3757#3776#0" expanded="true" />
+            <element signature="e#4006#4021#0" expanded="true" />
+            <element signature="e#4253#4270#0" expanded="true" />
+            <element signature="e#4750#4764#0" expanded="true" />
+            <element signature="e#4999#5019#0" expanded="true" />
+            <element signature="e#5713#5731#0" expanded="true" />
+            <element signature="e#5963#5980#0" expanded="true" />
+            <element signature="e#6460#6474#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

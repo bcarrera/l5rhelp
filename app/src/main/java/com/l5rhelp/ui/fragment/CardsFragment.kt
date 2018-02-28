@@ -22,7 +22,9 @@ import javax.inject.Inject
 
 class CardsFragment : Fragment(), CardsPresenter.View {
 
-    var filtersList : List<String> = emptyList()
+    var clanFiltersList : List<String> = emptyList()
+    var typeFiltersList : List<String> = emptyList()
+    var deckFiltersList : List<String> = emptyList()
 
     //Dagger
     @Inject lateinit var mPresenter: CardsPresenter
@@ -40,7 +42,7 @@ class CardsFragment : Fragment(), CardsPresenter.View {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         init()
-        if(filtersList.isNotEmpty()) mPresenter.useFilters(filtersList)
+        if(clanFiltersList.isNotEmpty() || typeFiltersList.isNotEmpty() || deckFiltersList.isNotEmpty()) mPresenter.useFilters(clanFiltersList, typeFiltersList, deckFiltersList)
     }
 
     private fun init () {
@@ -83,8 +85,10 @@ class CardsFragment : Fragment(), CardsPresenter.View {
         }
     }
 
-    fun setFilters (filtersList: List<String>) {
-        this.filtersList = filtersList
+    fun setFilters (clanFiltersList: List<String>, typeFiltersList: List<String>, deckFiltersList: List<String>) {
+        this.clanFiltersList = clanFiltersList
+        this.typeFiltersList = typeFiltersList
+        this.deckFiltersList = deckFiltersList
     }
 
     override fun showLoading() {

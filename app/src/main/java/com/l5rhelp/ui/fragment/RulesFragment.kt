@@ -9,16 +9,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.RulesModule
 import com.l5rhelp.domain.model.Ruling
 import com.l5rhelp.ui.activity.MainActivity
 import com.l5rhelp.ui.adapter.RulesAdapter
 import com.l5rhelp.ui.presenter.RulesPresenter
-import com.l5rhelp.ui.utils.addFragment
-import com.l5rhelp.ui.utils.app
-import com.l5rhelp.ui.utils.hideKeyboard
-import com.l5rhelp.ui.utils.replaceFragmentSafely
+import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_rules.*
 import javax.inject.Inject
 
@@ -42,11 +42,21 @@ class RulesFragment : Fragment(), RulesPresenter.View {
         super.onActivityCreated(savedInstanceState)
         component?.inject(this)
 
-        init()
         mPresenter.initPresenter()
     }
 
     private fun init () {
+        showLoading()
+        rules_search_webview.settings.javaScriptEnabled = true
+        rules_search_webview.settings.domStorageEnabled = true
+        rules_search_webview.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView?, url: String?) {
+                hideLoading()
+                super.onPageFinished(view, url)
+            }
+        }
+        rules_search_webview.loadUrl("https://fiveringsdb.com/rules/reference/")
+
         rules_search_imageview?.setOnClickListener {
             mPresenter.filterByName(rules_search_edittext?.text.toString())
             rules_search_imageview.hideKeyboard()
@@ -63,17 +73,6 @@ class RulesFragment : Fragment(), RulesPresenter.View {
         }
     }
 
-//    fun init () {
-//        rules_search_webview.settings.javaScriptEnabled = true
-//        rules_search_webview.webViewClient = object : WebViewClient() {
-//            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-//                view?.loadUrl("https://fiveringsdb.com/rules/reference/")
-//                return true
-//            }
-//        }
-//        rules_search_webview.loadUrl("https://fiveringsdb.com/rules/reference/")
-//    }
-
     override fun showLoading() {
         (activity as MainActivity).showLoading()
     }
@@ -82,8 +81,8 @@ class RulesFragment : Fragment(), RulesPresenter.View {
         (activity as MainActivity).hideLoading()
     }
 
-    override fun initPresenterSuccess(rulesList: List<Ruling>) {
-        populatRecycler(rulesList)
+    override fun initPresenterSuccess() {
+        init()
     }
 
     private fun populatRecycler(rulesList: List<Ruling>) {
@@ -101,6 +100,8 @@ class RulesFragment : Fragment(), RulesPresenter.View {
 
     override fun filterSuccess(rulingList: List<Ruling>) {
         populatRecycler(rulingList)
+        rules_search_webview.hide()
+        rules_search_recycler.show()
     }
 
 

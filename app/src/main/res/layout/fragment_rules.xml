@@ -21,8 +21,8 @@
             android:layout_weight="12"
             android:ems="10"
             android:hint="@string/cards_search_hint"
-            android:inputType="text"
-            android:imeOptions="actionSearch"/>
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
 
         <ImageView
             android:id="@+id/rules_search_imageview"
@@ -32,16 +32,16 @@
             android:src="@android:drawable/ic_search_category_default" />
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rules_search_recycler"
+    <WebView
+        android:id="@+id/rules_search_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"/>
 
-    <!--WebView
-        android:id="@+id/rules_search_webview"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rules_search_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"/-->
+        android:visibility="gone" />
 
 </LinearLayout>

@@ -20,7 +20,7 @@ class RulesPresenter(val view: RulesPresenter.View,
         getAllRulesFromDatabase()
     }
 
-    fun getAllRulesFromDatabase () {
+    private fun getAllRulesFromDatabase () {
         doAsync {
             rulesList = rulingDao.getAllRulings()
             uiThread {
@@ -28,13 +28,13 @@ class RulesPresenter(val view: RulesPresenter.View,
                     getAllRulingsInteractor.getAllRulingsInteractor(it)
                 } else {
                     view.hideLoading()
-                    view.initPresenterSuccess(rulesList.sortedWith(compareBy({ it.cardId.cardId })))
+                    view.initPresenterSuccess()
                 }
             }
         }
     }
 
-    fun addAllRulings(rulingsListForRoom: List<Ruling>?){
+    private fun addAllRulings(rulingsListForRoom: List<Ruling>?){
         doAsync {
             if (rulingsListForRoom != null) {
                 for (ruling in rulingsListForRoom) {
@@ -45,7 +45,7 @@ class RulesPresenter(val view: RulesPresenter.View,
 
             uiThread {
                 view.hideLoading()
-                view.initPresenterSuccess(rulesList)
+                view.initPresenterSuccess()
             }
         }
     }
@@ -64,7 +64,7 @@ class RulesPresenter(val view: RulesPresenter.View,
         doAsync {
             rulesList = rulingDao.filterByName("%$name%" )
             uiThread {
-                view.filterSuccess(rulesList)
+                view.filterSuccess(rulesList.sortedWith(compareBy({ it.cardId.cardId })))
                 view.hideLoading()
             }
         }
@@ -75,6 +75,6 @@ class RulesPresenter(val view: RulesPresenter.View,
         fun showLoading()
         fun hideLoading()
         fun filterSuccess(rulingList : List<Ruling>)
-        fun initPresenterSuccess(rulesList : List<Ruling>)
+        fun initPresenterSuccess()
     }
 }

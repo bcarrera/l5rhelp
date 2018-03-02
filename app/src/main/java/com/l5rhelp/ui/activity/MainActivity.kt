@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val fragmentManager = supportFragmentManager
             val f = fragmentManager.findFragmentById(R.id.main_content)
 
-            if (f is CardDetailFragment || f is CardsFilterFragment) {
+            if (f is CardDetailFragment || f is CardsFilterFragment || f is RulesDetailFragment) {
                 super.onBackPressed()
             } else {
                 alert (getString(R.string.main_exit_text)) {

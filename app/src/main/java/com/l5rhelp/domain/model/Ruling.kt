@@ -4,6 +4,7 @@ import android.arch.persistence.room.Embedded
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 @Entity(tableName = "ruling_table")
 class Ruling (
@@ -16,4 +17,4 @@ class Ruling (
         @SerializedName("link") val link : String?,
         @SerializedName("source") val source : String,
         @SerializedName("text") val text : String
-)
+) : Serializable

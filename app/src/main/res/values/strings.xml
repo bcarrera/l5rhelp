@@ -84,5 +84,7 @@
 
     <!-- Rules -->
 
+    <string name="ruling_detail_link_title">Enlace</string>
+
 
 </resources>

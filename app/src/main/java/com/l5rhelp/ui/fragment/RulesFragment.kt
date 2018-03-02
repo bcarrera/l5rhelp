@@ -15,6 +15,7 @@ import com.l5rhelp.domain.model.Ruling
 import com.l5rhelp.ui.activity.MainActivity
 import com.l5rhelp.ui.adapter.RulesAdapter
 import com.l5rhelp.ui.presenter.RulesPresenter
+import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
 import com.l5rhelp.ui.utils.hideKeyboard
 import com.l5rhelp.ui.utils.replaceFragmentSafely
@@ -90,7 +91,11 @@ class RulesFragment : Fragment(), RulesPresenter.View {
         val itemDecor = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
         rules_search_recycler?.addItemDecoration(itemDecor)
         rules_search_recycler?.adapter = RulesAdapter(rulesList) {
-
+            val rulesDetailFragment = RulesDetailFragment()
+            val bundle  = Bundle()
+            bundle.putSerializable("ruling", it)
+            rulesDetailFragment.arguments = bundle
+            activity?.addFragment(rulesDetailFragment, rulesDetailFragment.javaClass.name, R.id.main_content)
         }
     }
 

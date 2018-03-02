@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import com.l5rhelp.R
 import com.l5rhelp.dagger.submodules.RulesModule
 import com.l5rhelp.domain.model.Ruling
@@ -15,6 +16,8 @@ import com.l5rhelp.ui.activity.MainActivity
 import com.l5rhelp.ui.adapter.RulesAdapter
 import com.l5rhelp.ui.presenter.RulesPresenter
 import com.l5rhelp.ui.utils.app
+import com.l5rhelp.ui.utils.hideKeyboard
+import com.l5rhelp.ui.utils.replaceFragmentSafely
 import kotlinx.android.synthetic.main.fragment_rules.*
 import javax.inject.Inject
 
@@ -23,6 +26,7 @@ import javax.inject.Inject
  * A simple [Fragment] subclass.
  */
 class RulesFragment : Fragment(), RulesPresenter.View {
+
     //Dagger
     @Inject lateinit var mPresenter: RulesPresenter
     val component by lazy { activity?.app?.component?.plus(RulesModule(this)) }
@@ -37,8 +41,37 @@ class RulesFragment : Fragment(), RulesPresenter.View {
         super.onActivityCreated(savedInstanceState)
         component?.inject(this)
 
+        init()
         mPresenter.initPresenter()
     }
+
+    private fun init () {
+        rules_search_imageview?.setOnClickListener {
+            mPresenter.filterByName(rules_search_edittext?.text.toString())
+            rules_search_imageview.hideKeyboard()
+        }
+
+        rules_search_edittext.setOnEditorActionListener { v, actionId, event ->
+            var handled = false
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                mPresenter.filterByName(rules_search_edittext?.text.toString())
+                rules_search_edittext.hideKeyboard()
+                handled = true
+            }
+            handled
+        }
+    }
+
+//    fun init () {
+//        rules_search_webview.settings.javaScriptEnabled = true
+//        rules_search_webview.webViewClient = object : WebViewClient() {
+//            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+//                view?.loadUrl("https://fiveringsdb.com/rules/reference/")
+//                return true
+//            }
+//        }
+//        rules_search_webview.loadUrl("https://fiveringsdb.com/rules/reference/")
+//    }
 
     override fun showLoading() {
         (activity as MainActivity).showLoading()
@@ -49,6 +82,10 @@ class RulesFragment : Fragment(), RulesPresenter.View {
     }
 
     override fun initPresenterSuccess(rulesList: List<Ruling>) {
+        populatRecycler(rulesList)
+    }
+
+    private fun populatRecycler(rulesList: List<Ruling>) {
         rules_search_recycler?.layoutManager = LinearLayoutManager(context)
         val itemDecor = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
         rules_search_recycler?.addItemDecoration(itemDecor)
@@ -57,5 +94,9 @@ class RulesFragment : Fragment(), RulesPresenter.View {
         }
     }
 
+    override fun filterSuccess(rulingList: List<Ruling>) {
+        populatRecycler(rulingList)
+    }
 
-}// Required empty public constructor
+
+}

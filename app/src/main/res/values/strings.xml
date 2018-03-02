@@ -82,4 +82,7 @@
     <string name="title_activity_cards_filter">CardsFilterActivity</string>
     <string name="cards_filters_selection_button">Aceptar</string>
 
+    <!-- Rules -->
+
+
 </resources>

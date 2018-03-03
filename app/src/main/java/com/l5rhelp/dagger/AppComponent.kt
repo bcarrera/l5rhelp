@@ -8,7 +8,8 @@ import com.l5rhelp.dagger.submodules.RulesModule
 import com.l5rhelp.main.dagger.CardsComponent
 import com.l5rhelp.main.dagger.MainComponent
 import com.l5rhelp.main.dagger.RulesComponent
-import com.l5rhelp.ui.fragment.CardsFragment
+import com.l5rhelp.ui.fragment.CardDetailFragment
+import com.l5rhelp.ui.fragment.SettingsFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -16,6 +17,12 @@ import javax.inject.Singleton
 @Component(modules = [(AppModule::class), (NetworkModule::class), (InteractorsModule::class)])
 interface AppComponent {
     fun inject(app: App)
+
+    //Only app
+    fun inject(cardsDetailFragment: CardDetailFragment)
+    fun inject(settingsFragment: SettingsFragment)
+
+    //Submodules
     fun plus(mainModule: MainModule): MainComponent
     fun plus(cardsFragment: CardsModule): CardsComponent
     fun plus(rulesFragment: RulesModule):RulesComponent

@@ -6,19 +6,18 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.l5rhelp.R
-import com.l5rhelp.base.App
+import com.l5rhelp.data.SharedPreferences
 import com.l5rhelp.domain.model.Card
-import com.l5rhelp.ui.utils.Utils
-import com.l5rhelp.ui.utils.hide
-import com.l5rhelp.ui.utils.loadUrl
-import com.l5rhelp.ui.utils.show
+import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_card_detail.*
+import javax.inject.Inject
 
 
 class CardDetailFragment : Fragment() {
 
+    //Dagger
+    @Inject lateinit var preferences: SharedPreferences
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -29,7 +28,8 @@ class CardDetailFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        if(Utils.hasNetworkConnection(context) && App.preferences.loadPhoto!!) {
+        activity?.app?.component?.inject(this)
+        if(Utils.hasNetworkConnection(context) && preferences.loadPhoto!!) {
             initImage(arguments?.getSerializable("card") as Card)
         } else {
             initTextInfo(arguments?.getSerializable("card") as Card)

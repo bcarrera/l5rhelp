@@ -4,6 +4,7 @@ import android.arch.persistence.room.Room
 import android.content.Context
 import com.l5rhelp.base.App
 import com.l5rhelp.data.L5RHelpDatabase
+import com.l5rhelp.data.SharedPreferences
 import com.squareup.picasso.Picasso
 import dagger.Module
 import dagger.Provides
@@ -22,11 +23,15 @@ import javax.inject.Singleton
     fun providePicasso(@ApplicationQualifier context: Context): Picasso = Picasso.Builder(context).build()
 
 
-    //Room Databse
+    //Room Database
     @Provides fun providesAppDatabase(@ApplicationQualifier context: Context): L5RHelpDatabase =
             Room.databaseBuilder(context, L5RHelpDatabase::class.java, "l5rHelp-db").build()
 
     @Provides fun providesCardDao(database: L5RHelpDatabase) = database.cardDao()
 
     @Provides fun providesRulingDao(database: L5RHelpDatabase) = database.rulingDao()
+
+    //Preferences
+    @Provides @Singleton
+    fun provideSharedPreferences(): SharedPreferences = SharedPreferences(app)
 }

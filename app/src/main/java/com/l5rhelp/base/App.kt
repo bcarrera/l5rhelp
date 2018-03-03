@@ -4,13 +4,8 @@ import android.app.Application
 import com.l5rhelp.dagger.AppComponent
 import com.l5rhelp.dagger.AppModule
 import com.l5rhelp.dagger.DaggerAppComponent
-import com.l5rhelp.data.SharedPreferences
 
 class App : Application() {
-
-    companion object {
-        lateinit var preferences: SharedPreferences
-    }
 
     val component: AppComponent by lazy {
         DaggerAppComponent
@@ -21,7 +16,6 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        preferences = SharedPreferences(applicationContext)
         component.inject(this)
     }
 }

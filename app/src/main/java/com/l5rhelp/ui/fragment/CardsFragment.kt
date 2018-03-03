@@ -47,9 +47,8 @@ class CardsFragment : Fragment(), CardsPresenter.View {
 
     private fun init () {
         cards_search_imageview?.setOnClickListener {
-            //mPresenter.filterByName(cards_search_edittext?.text.toString())
-            //cards_search_imageview.hideKeyboard()
-            activity?.replaceFragmentSafely(CardsFilterFragment(), "CardsFilterFragment", false, R.id.main_content)
+            mPresenter.filterByName(cards_search_edittext?.text.toString())
+            cards_search_imageview.hideKeyboard()
         }
 
         cards_search_edittext.setOnEditorActionListener { v, actionId, event ->
@@ -60,6 +59,10 @@ class CardsFragment : Fragment(), CardsPresenter.View {
                 handled = true
             }
             handled
+        }
+
+        cards_filters_imageview?.setOnClickListener {
+            activity?.addFragment(CardsFilterFragment(), "CardsFilterFragment", R.id.main_content)
         }
     }
 

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.l5rhelp.R
+import com.l5rhelp.base.App
 import com.l5rhelp.domain.model.Card
 import com.l5rhelp.ui.utils.Utils
 import com.l5rhelp.ui.utils.hide
@@ -28,7 +29,7 @@ class CardDetailFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        if(Utils.hasNetworkConnection(context)) {
+        if(Utils.hasNetworkConnection(context) && App.preferences.loadPhoto!!) {
             initImage(arguments?.getSerializable("card") as Card)
         } else {
             initTextInfo(arguments?.getSerializable("card") as Card)

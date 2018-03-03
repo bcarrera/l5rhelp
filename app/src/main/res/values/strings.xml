@@ -86,5 +86,8 @@
 
     <string name="ruling_detail_link_title">Enlace</string>
 
+    <!-- Settings -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_load_photo">Descargar imagen para el detalle de una carta</string>
 
 </resources>

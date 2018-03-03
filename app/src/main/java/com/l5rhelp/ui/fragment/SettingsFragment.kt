@@ -6,8 +6,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 
 import com.l5rhelp.R
+import com.l5rhelp.base.App
+import kotlinx.android.synthetic.main.fragment_settings.*
 
 
 /**
@@ -22,4 +25,15 @@ class SettingsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
-}// Required empty public constructor
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        init() 
+    }
+
+    fun init () {
+        settings_load_photo_checkbox.setOnCheckedChangeListener { buttonView, isChecked ->
+            App.preferences.loadPhoto = isChecked
+        }
+    }
+
+}

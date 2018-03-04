@@ -18,6 +18,9 @@ interface CardDao {
     @Query("SELECT * FROM card_table WHERE clan IN (:clanFilters) AND type IN (:typeFilters) AND side IN (:deckFilters)")
     fun useFilters(clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>): MutableList<Card>
 
+    @Query("SELECT count(*) FROM card_table")
+    fun isTableEmpty(): Int
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCard(card: Card)
 

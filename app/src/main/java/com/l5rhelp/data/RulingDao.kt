@@ -15,6 +15,9 @@ interface RulingDao {
     @Query("SELECT * FROM ruling_table WHERE cardId LIKE :name")
     fun filterByName(name : String): MutableList<Ruling>
 
+    @Query("SELECT count(*) FROM ruling_table")
+    fun isTableEmpty(): Int
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertRuling(ruling: Ruling)
 

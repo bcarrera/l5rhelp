@@ -22,9 +22,9 @@ class RulesPresenter(val view: RulesPresenter.View,
 
     private fun getAllRulesFromDatabase () {
         doAsync {
-            rulesList = rulingDao.getAllRulings()
+            val tableCount : Int = rulingDao.isTableEmpty()
             uiThread {
-                if(rulesList.isEmpty()){
+                if(tableCount == 0){
                     getAllRulingsInteractor.getAllRulingsInteractor(it)
                 } else {
                     view.hideLoading()

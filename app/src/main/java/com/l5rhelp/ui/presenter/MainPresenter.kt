@@ -27,11 +27,11 @@ class MainPresenter (val view: View,
         //TODO Error genérico
     }
 
-    fun getAllCardsFromDatabase () {
+    private fun getAllCardsFromDatabase () {
         doAsync {
-            cardList = cardDao.getAllCards()
+            val tableCount : Int = cardDao.isTableEmpty()
             uiThread {
-                if(cardList.isEmpty()){
+                if(tableCount == 0){
                     getAllCardsInteractor.getAllCardsInteractor(it)
                 } else {
                     view.hideLoading()
@@ -46,7 +46,7 @@ class MainPresenter (val view: View,
         return cardList
     }
 
-    fun addAllCards(cardsListForRoom: List<Card>?){
+    private fun addAllCards(cardsListForRoom: List<Card>?){
         doAsync {
             if (cardsListForRoom != null) {
                 for (card in cardsListForRoom) cardDao.insertCard(card)

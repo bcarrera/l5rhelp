@@ -5,9 +5,11 @@ import com.l5rhelp.base.App
 import com.l5rhelp.dagger.submodules.CardsModule
 import com.l5rhelp.dagger.submodules.MainModule
 import com.l5rhelp.dagger.submodules.RulesModule
+import com.l5rhelp.dagger.submodules.SettingsModule
 import com.l5rhelp.main.dagger.CardsComponent
 import com.l5rhelp.main.dagger.MainComponent
 import com.l5rhelp.main.dagger.RulesComponent
+import com.l5rhelp.main.dagger.SettingsComponent
 import com.l5rhelp.ui.fragment.CardDetailFragment
 import com.l5rhelp.ui.fragment.SettingsFragment
 import dagger.Component
@@ -20,10 +22,10 @@ interface AppComponent {
 
     //Only app
     fun inject(cardsDetailFragment: CardDetailFragment)
-    fun inject(settingsFragment: SettingsFragment)
 
     //Submodules
     fun plus(mainModule: MainModule): MainComponent
     fun plus(cardsFragment: CardsModule): CardsComponent
     fun plus(rulesFragment: RulesModule):RulesComponent
+    fun plus(settingsFragment: SettingsModule):SettingsComponent
 }

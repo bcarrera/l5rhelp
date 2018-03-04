@@ -88,6 +88,14 @@
 
     <!-- Settings -->
     <string name="settings_title">Ajustes</string>
+    <string name="settings_images_title">Imágenes</string>
     <string name="settings_load_photo">Descargar imagen para el detalle de una carta</string>
+    <string-array name="upgrade_DDBB">
+        <item>Mensualmente</item>
+        <item>Semanalmente</item>
+        <item>No actualizar</item>
+    </string-array>
+    <string name="settings_DB_title">Base de datos</string>
+    <string name="settings_upgrade_DB_title">Actualizar:</string>
 
 </resources>

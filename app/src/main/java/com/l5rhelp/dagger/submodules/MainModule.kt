@@ -1,6 +1,7 @@
 package com.l5rhelp.dagger.submodules
 
 import com.l5rhelp.data.CardDao
+import com.l5rhelp.data.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllCardsInteractor
 import com.l5rhelp.ui.presenter.MainPresenter
 import com.l5rhelp.ui.activity.MainActivity
@@ -17,6 +18,7 @@ class MainModule(val activity: MainActivity) {
     fun provideMainPresenter(
             view: MainPresenter.View,
             getAllCardsInteractor: GetAllCardsInteractor,
-            cardDao: CardDao
-    ) = MainPresenter(view, getAllCardsInteractor, cardDao)
+            cardDao: CardDao,
+            preferences: SharedPreferences
+    ) = MainPresenter(view, getAllCardsInteractor, cardDao, preferences)
 }

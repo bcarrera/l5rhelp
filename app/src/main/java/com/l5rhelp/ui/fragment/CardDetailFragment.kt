@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.l5rhelp.R
-import com.l5rhelp.data.SharedPreferences
+import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.model.Card
 import com.l5rhelp.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_card_detail.*

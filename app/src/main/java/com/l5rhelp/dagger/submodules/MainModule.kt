@@ -1,7 +1,7 @@
 package com.l5rhelp.dagger.submodules
 
 import com.l5rhelp.data.CardDao
-import com.l5rhelp.data.SharedPreferences
+import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllCardsInteractor
 import com.l5rhelp.ui.presenter.MainPresenter
 import com.l5rhelp.ui.activity.MainActivity

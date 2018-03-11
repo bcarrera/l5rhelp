@@ -1,7 +1,7 @@
 package com.l5rhelp.ui.presenter
 
 import com.l5rhelp.data.CardDao
-import com.l5rhelp.data.SharedPreferences
+import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllCardsInteractor
 import com.l5rhelp.domain.model.Card
 import com.l5rhelp.domain.model.CardsResponse

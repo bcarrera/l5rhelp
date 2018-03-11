@@ -41,6 +41,7 @@
     <string name="left_menu_option1">Cartas</string>
     <string name="left_menu_option2">Reglas</string>
     <string name="left_menu_option3">Ajustes</string>
+    <string name="left_menu_option4">Partida</string>
 
     <!-- Cards -->
     <string name="cards_intructions">Elije los filtros que necesites o realiza una búsqueda por el nombre de la carta.</string>
@@ -87,6 +88,7 @@
     <string name="ruling_detail_link_title">Enlace</string>
 
     <!-- Settings -->
+
     <string name="settings_title">Ajustes</string>
     <string name="settings_images_title">Imágenes</string>
     <string name="settings_load_photo">Descargar imagen para el detalle de una carta</string>
@@ -97,5 +99,25 @@
     </string-array>
     <string name="settings_DB_title">Base de datos</string>
     <string name="settings_upgrade_DB_title">Actualizar:</string>
+
+    <!-- Game counter -->
+
+    <string name="game_title">Contador de la partida</string>
+    <string name="game_player_1">Jugador 1</string>
+    <string name="game_player_2">Jugador 2</string>
+    <string name="game_clan_title">Clan</string>
+    <string name="game_honor_title">Honor</string>
+    <string name="game_fate_title">Destino</string>
+    <string name="game_dial_title">Dial</string>
+
+    <string-array name="playing_clans_list">
+        <item>scorpion</item>
+        <item>dragon</item>
+        <item>phoenix</item>
+        <item>crab</item>
+        <item>crane</item>
+        <item>lion</item>
+        <item>unicorn</item>
+    </string-array>
 
 </resources>

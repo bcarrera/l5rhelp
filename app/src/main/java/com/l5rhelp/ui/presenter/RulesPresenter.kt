@@ -1,7 +1,7 @@
 package com.l5rhelp.ui.presenter
 
 import com.l5rhelp.data.RulingDao
-import com.l5rhelp.data.SharedPreferences
+import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllRulingsInteractor
 import com.l5rhelp.domain.model.Ruling
 import com.l5rhelp.domain.model.RulingsResponse

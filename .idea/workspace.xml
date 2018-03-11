@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="374dc73c-ce13-4ed0-94b0-d6baec0bbc7e" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/SettingsComponent.kt" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/SettingsModule.kt" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/SettingsPresenter.kt" />
@@ -26,6 +27,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/GameCounterFragment.kt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_remove_black.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_sword_cross.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_game_counter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,6 +76,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file leaf-file-name="MainPresenter.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,11 +84,39 @@
               <caret line="86" column="71" lean-forward="false" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
               <folding>
                 <element signature="e#34#367#0" expanded="true" />
+=======
+      <file leaf-file-name="fragment_game_counter.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_game_counter.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <folding>
+                <element signature="e#1330#1353#0" expanded="true" />
+                <element signature="e#2289#2314#0" expanded="true" />
+                <element signature="e#3550#3576#0" expanded="true" />
+                <element signature="e#4555#4580#0" expanded="true" />
+                <element signature="e#5871#5896#0" expanded="true" />
+                <element signature="e#6871#6896#0" expanded="true" />
+                <element signature="e#8183#8208#0" expanded="true" />
+                <element signature="e#9183#9208#0" expanded="true" />
+                <element signature="e#10502#10525#0" expanded="true" />
+                <element signature="e#11513#11538#0" expanded="true" />
+                <element signature="e#12782#12808#0" expanded="true" />
+                <element signature="e#13787#13812#0" expanded="true" />
+                <element signature="e#15103#15128#0" expanded="true" />
+                <element signature="e#16103#16128#0" expanded="true" />
+                <element signature="e#17415#17440#0" expanded="true" />
+                <element signature="e#18415#18440#0" expanded="true" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="RulesPresenter.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,21 +124,39 @@
               <caret line="98" column="71" lean-forward="false" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
               <folding>
                 <element signature="e#34#394#0" expanded="true" />
+=======
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+              <folding>
+                <element signature="e#3419#3456#0" expanded="true" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="CardsPresenter.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="226">
               <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+=======
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="SharedPreferences.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/SharedPreferences.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,6 +165,14 @@
               <folding>
                 <element signature="e#26#145#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="GameCounterFragment.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/GameCounterFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -2011,6 +2080,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
+=======
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_list_card.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/entity/CardEntity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/domain/model/Card.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/domain/model/PackCard.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/Utils.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_card_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_cards.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/CardsSearchFilters.kt" />
         <option value="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/l5rhelp/data/CardDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterActivity.kt" />
@@ -2061,7 +2145,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/RulesModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/SharedPreferences.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/GameCounterFragment.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black.svg" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_game_counter.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -2075,7 +2170,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2089,48 +2184,87 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
       <pane id="AndroidView">
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+>>>>>>> Stashed changes
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="L5RHelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+=======
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="L5RHelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="L5RHelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< Updated upstream
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+=======
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> Stashed changes
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="l5rhelp" />
@@ -2148,19 +2282,40 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="L5RHelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="l5rhelp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+=======
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> Stashed changes
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
@@ -2170,37 +2325,50 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="L5RHelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< Updated upstream
+              <option name="myItemId" value="l5rhelp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+=======
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="l5rhelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="L5RHelp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="L5RHelp" />
@@ -2210,10 +2378,66 @@
               <option name="myItemId" value="L5RHelp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="l5rhelp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+<<<<<<< Updated upstream
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+=======
+      <pane id="AndroidView">
+>>>>>>> Stashed changes
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+<<<<<<< Updated upstream
+=======
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="L5RHelp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+>>>>>>> Stashed changes
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2221,7 +2445,11 @@
     <property name="settings.editor.selected.configurable" value="instant.run" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="bc7b8c1" />
+<<<<<<< Updated upstream
     <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt&#10;cardpre&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt&#10;rulesmo&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/dagger/submodules/RulesModule.kt&#10;rulespre&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt&#10;settfra&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/SettingsFragment.kt&#10;mainmo&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/dagger/submodules/MainModule.kt&#10;mainpre&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt&#10;string&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/res/values/strings.xml&#10;settingsmo&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/dagger/submodules/SettingsModule.kt&#10;carddet&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardDetailFragment.kt&#10;rulesfr&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/RulesFragment.kt&#10;appcom&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/dagger/AppComponent.kt&#10;appm&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/dagger/AppModule.kt&#10;strings&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/res/values/strings.xml&#10;ettings&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/SettingsFragment.kt&#10;rulpre&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt&#10;rul&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/data/RulingDao.kt&#10;cardspre&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt&#10;cardde&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardDetailFragment.kt&#10;maina&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;cardfr&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;settings&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/SettingsFragment.kt&#10;ca&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;cardf&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;card&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardDetailFragment.kt&#10;app&#9;null&#9;null&#10;mainac&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;cardsfr&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;rulada&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/RulesAdapter.kt&#10;cards&#9;FILE&#9;file://C:/Bruno/Programacion/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;rulesada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/RulesAdapter.kt&#10;rulesfragm&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/RulesFragment.kt&#10;ruling&#9;null&#9;null&#10;m&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/dagger/submodules/MainModule.kt&#10;rulingda&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/data/RulingDao.kt&#10;ruada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/RulesAdapter.kt&#10;cardid&#9;null&#9;null&#10;cardda&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/data/CardDao.kt&#10;mainp&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt&#10;extensi&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;carddeta&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/fragment_card_detail.xml&#10;aina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;android&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml&#10;filtea&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterActivity.kt&#10;navigation&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;naviga&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;extens&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;filter_dia&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/filters_dialog.xml&#10;fr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;exten&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt" />
+=======
+    <property name="SearchEverywhereHistoryKey" value="maina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;strings&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;srting&#9;null&#9;null&#10;rulesada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/RulesAdapter.kt&#10;rulpre&#9;null&#9;null&#10;rulesfragm&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/RulesFragment.kt&#10;ruling&#9;null&#9;null&#10;mainac&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;m&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/dagger/submodules/MainModule.kt&#10;rulingda&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/data/RulingDao.kt&#10;ruada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/RulesAdapter.kt&#10;cardid&#9;null&#9;null&#10;cardda&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/data/CardDao.kt&#10;mainp&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/presenter/MainPresenter.kt&#10;card&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/domain/model/Card.kt&#10;rul&#9;null&#9;null&#10;string&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;extensi&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;carddeta&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/fragment_card_detail.xml&#10;aina&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;android&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml&#10;filtea&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/CardsFilterActivity.kt&#10;navigation&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;naviga&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/NavigationExtensions.kt&#10;extens&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;cardsfr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;filter_dia&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/filters_dialog.xml&#10;main&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt&#10;fr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;exten&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;STRING&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/strings.xml&#10;cardfr&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;adap&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt&#10;carada&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/adapter/CardsAdapter.kt&#10;fragment&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;extension&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;AC&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/layout/activity_main.xml&#10;main_&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/menu/activity_main_drawer.xml&#10;exte&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/utils/Extensions.kt&#10;color&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/colors.xml&#10;cardsf&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt&#10;colors&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/res/values/colors.xml&#10;gradle&#9;ACTION&#9;ActivateGradleToolWindow&#10;androidmanife&#9;FILE&#9;file://C:/Users/Krupto/AndroidStudioProjects/L5RHelp/app/src/main/AndroidManifest.xml" />
+>>>>>>> Stashed changes
     <property name="DEBUGGABLE_DEVICE" value="zuk-zuk_z2131-bc7b8c1" />
     <property name="DEBUGGABLE_PROCESS" value="com.l5rhelp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2340,7 +2568,11 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520172120201" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520791904214" />
+>>>>>>> Stashed changes
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2388,7 +2620,11 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520172120202" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520791904214" />
+>>>>>>> Stashed changes
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2571,7 +2807,11 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< Updated upstream
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520172120204" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520791904216" />
+>>>>>>> Stashed changes
       </method>
     </configuration>
     <list size="1">
@@ -2613,8 +2853,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> Stashed changes
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2632,10 +2876,17 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22995462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16552901" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23385301" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2761,6 +3012,7 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_list_card.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2806,11 +3058,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="228" column="32" lean-forward="false" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+=======
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/795e111c612ba96d0175f5705291228ca8167dc8/kotlin-stdlib-1.2.21-sources.jar!/generated/_Arrays.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="13003" column="28" lean-forward="false" selection-start-line="13003" selection-start-column="28" selection-end-line="13003" selection-end-column="28" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/domain/model/CardId.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="136">
           <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="40" />
         </state>
@@ -2820,18 +3079,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+=======
+        <state relative-caret-position="17">
+          <caret line="170" column="16" lean-forward="false" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="50" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/domain/model/Ruling.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="323">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+=======
+        <state relative-caret-position="536">
+          <caret line="68" column="86" lean-forward="false" selection-start-line="68" selection-start-column="86" selection-end-line="68" selection-end-column="86" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="102">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
@@ -2846,6 +3126,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_rule_detail.xml">
+=======
+        <state relative-caret-position="416">
+          <caret line="35" column="99" lean-forward="false" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/filters_dialog.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
@@ -2854,12 +3145,10 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/RulesDetailFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="251">
           <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
         </state>
@@ -2870,12 +3159,17 @@
         <state relative-caret-position="578">
           <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding />
+=======
+        <state relative-caret-position="221">
+          <caret line="320" column="24" lean-forward="false" selection-start-line="320" selection-start-column="24" selection-end-line="320" selection-end-column="24" />
+>>>>>>> Stashed changes
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2889,11 +3183,19 @@
         <state relative-caret-position="51">
           <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/domain/model/CardIdConverter.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/domain/model/PackCardConverter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="-16">
           <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
           <folding />
@@ -2901,6 +3203,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/CardsComponent.kt">
+=======
+        <state relative-caret-position="170">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cards.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
@@ -2909,9 +3222,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/CardsModule.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="85">
           <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding />
+=======
+        <state relative-caret-position="323">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -2926,8 +3244,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/l5rhelp/dagger/AppComponent.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="46">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+=======
+        <state relative-caret-position="170">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -2943,9 +3266,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_card_detail.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="28" />
           <folding />
+=======
+        <state relative-caret-position="272">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="59" selection-end-column="5" />
+>>>>>>> Stashed changes
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2954,9 +3282,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cards_filter.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="153">
           <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding />
+=======
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2965,6 +3298,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFilterFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="221">
           <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding />
@@ -2975,19 +3309,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="58" column="57" lean-forward="false" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+=======
+        <state relative-caret-position="-34">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_list_ruling.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cards.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_list_card.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="72" lean-forward="false" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardsFragment.kt">
@@ -3000,83 +3352,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/RulingDao.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="153">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+=======
+        <state relative-caret-position="187">
+          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/CardDao.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="183">
           <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding />
+=======
+        <state relative-caret-position="85">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/AppModule.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="345">
           <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding />
+=======
+        <state relative-caret-position="119">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/SettingsComponent.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
+<<<<<<< Updated upstream
           <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding />
+=======
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/AppComponent.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="289">
           <caret line="29" column="64" lean-forward="false" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
           <folding />
+=======
+        <state relative-caret-position="187">
+          <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/RulesFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="119">
           <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#34#759#0" expanded="false" />
             <marker date="1520164736311" expanded="true" signature="3643:3645" ph="{...}" />
           </folding>
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/CardDetailFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="146">
           <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#34#405#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="85">
+          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/utils/DataBasePeriodicity.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="51">
           <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           <folding />
+=======
+        <state relative-caret-position="153">
+          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/SettingsModule.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="119">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
+=======
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1666">
           <caret line="98" column="55" lean-forward="false" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
           <folding />
@@ -3099,42 +3496,105 @@
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+=======
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/RulingDao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/MainModule.kt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/MainModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="272">
           <caret line="22" column="71" lean-forward="false" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
           <folding />
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/SettingsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="153">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="89" />
           <folding>
             <element signature="e#34#583#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="255">
+          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/dagger/submodules/RulesModule.kt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="272">
           <caret line="22" column="76" lean-forward="false" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+=======
+        <state relative-caret-position="289">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/795e111c612ba96d0175f5705291228ca8167dc8/kotlin-stdlib-1.2.21-sources.jar!/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="807" column="56" lean-forward="false" selection-start-line="807" selection-start-column="56" selection-end-line="807" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/adapter/RulesAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/RulesPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/presenter/CardsPresenter.kt">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_rules.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding />
         </state>
       </provider>
+<<<<<<< Updated upstream
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/data/SharedPreferences.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -3162,6 +3622,113 @@
           <caret line="98" column="71" lean-forward="false" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
           <folding>
             <element signature="e#34#394#0" expanded="true" />
+          </folding>
+=======
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/fragment/GameCounterFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/795e111c612ba96d0175f5705291228ca8167dc8/kotlin-stdlib-1.2.21-sources.jar!/kotlin/text/Strings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="236" selection-end-column="3" />
+          <folding />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_game_counter.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="e#1330#1353#0" expanded="true" />
+            <element signature="e#2289#2314#0" expanded="true" />
+            <element signature="e#3550#3576#0" expanded="true" />
+            <element signature="e#4555#4580#0" expanded="true" />
+            <element signature="e#5871#5896#0" expanded="true" />
+            <element signature="e#6871#6896#0" expanded="true" />
+            <element signature="e#8183#8208#0" expanded="true" />
+            <element signature="e#9183#9208#0" expanded="true" />
+            <element signature="e#10502#10525#0" expanded="true" />
+            <element signature="e#11513#11538#0" expanded="true" />
+            <element signature="e#12782#12808#0" expanded="true" />
+            <element signature="e#13787#13812#0" expanded="true" />
+            <element signature="e#15103#15128#0" expanded="true" />
+            <element signature="e#16103#16128#0" expanded="true" />
+            <element signature="e#17415#17440#0" expanded="true" />
+            <element signature="e#18415#18440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding>
+            <element signature="e#904#931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/l5rhelp/ui/activity/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+          <folding>
+            <element signature="e#3419#3456#0" expanded="true" />
           </folding>
         </state>
       </provider>

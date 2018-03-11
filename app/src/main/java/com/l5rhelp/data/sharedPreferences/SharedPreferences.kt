@@ -1,4 +1,4 @@
-package com.l5rhelp.data
+package com.l5rhelp.data.sharedPreferences
 
 import android.content.Context
 import android.content.SharedPreferences

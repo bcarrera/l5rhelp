@@ -83,6 +83,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 toolbar_navigation_title.text = getString(R.string.left_menu_option3)
                 replaceFragmentSafely(SettingsFragment(), "SettingsFragment", false, R.id.main_content)
             }
+
+            R.id.nav_game_counter -> {
+                toolbar_navigation_title.text = getString(R.string.left_menu_option4)
+                replaceFragmentSafely(GameCounterFragment(), "GameCounterFragment", false, R.id.main_content)
+            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)

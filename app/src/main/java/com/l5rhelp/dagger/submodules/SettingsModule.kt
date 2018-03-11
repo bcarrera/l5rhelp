@@ -1,6 +1,6 @@
 package com.l5rhelp.dagger.submodules
 
-import com.l5rhelp.data.SharedPreferences
+import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.ui.fragment.SettingsFragment
 import com.l5rhelp.ui.presenter.SettingsPresenter
 import dagger.Module

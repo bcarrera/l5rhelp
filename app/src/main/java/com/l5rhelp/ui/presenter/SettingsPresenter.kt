@@ -1,8 +1,8 @@
 package com.l5rhelp.ui.presenter
 
-import com.l5rhelp.data.SharedPreferences
+import com.l5rhelp.data.sharedPreferences.SharedPreferences
 
-class SettingsPresenter (val view: SettingsPresenter.View, private val preferences: SharedPreferences ){
+class SettingsPresenter (val view: SettingsPresenter.View, private val preferences: SharedPreferences){
 
     fun loadPhoto () : Boolean? {
         return preferences.loadPhoto

@@ -15,8 +15,8 @@ interface CardDao {
     @Query("SELECT * FROM card_table WHERE name LIKE :name")
     fun filterByName(name : String): MutableList<Card>
 
-    @Query("SELECT * FROM card_table WHERE clan IN (:clanFilters) AND type IN (:typeFilters) AND side IN (:deckFilters)")
-    fun useFilters(clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>): MutableList<Card>
+    @Query("SELECT * FROM card_table WHERE clan IN (:clanFilters) AND type IN (:typeFilters) AND side IN (:deckFilters) AND cost = (:cost)")
+    fun useFilters(clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>, cost:Int): MutableList<Card>
 
     @Query("SELECT count(*) FROM card_table")
     fun isTableEmpty(): Int

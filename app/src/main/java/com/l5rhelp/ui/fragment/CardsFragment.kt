@@ -1,6 +1,5 @@
 package com.l5rhelp.ui.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DividerItemDecoration
@@ -22,9 +21,10 @@ import javax.inject.Inject
 
 class CardsFragment : Fragment(), CardsPresenter.View {
 
-    var clanFiltersList : List<String> = emptyList()
-    var typeFiltersList : List<String> = emptyList()
-    var deckFiltersList : List<String> = emptyList()
+    private var clanFiltersList : List<String> = emptyList()
+    private var typeFiltersList : List<String> = emptyList()
+    private var deckFiltersList : List<String> = emptyList()
+    var cost : Int = 20
 
     //Dagger
     @Inject lateinit var mPresenter: CardsPresenter
@@ -42,7 +42,7 @@ class CardsFragment : Fragment(), CardsPresenter.View {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         init()
-        if(clanFiltersList.isNotEmpty() || typeFiltersList.isNotEmpty() || deckFiltersList.isNotEmpty()) mPresenter.useFilters(clanFiltersList, typeFiltersList, deckFiltersList)
+        if(clanFiltersList.isNotEmpty() || typeFiltersList.isNotEmpty() || deckFiltersList.isNotEmpty()) mPresenter.useFilters(clanFiltersList, typeFiltersList, deckFiltersList, cost)
     }
 
     private fun init () {
@@ -88,10 +88,11 @@ class CardsFragment : Fragment(), CardsPresenter.View {
         }
     }
 
-    fun setFilters (clanFiltersList: List<String>, typeFiltersList: List<String>, deckFiltersList: List<String>) {
+    fun setFilters (clanFiltersList: List<String>, typeFiltersList: List<String>, deckFiltersList: List<String>, cost:Int) {
         this.clanFiltersList = clanFiltersList
         this.typeFiltersList = typeFiltersList
         this.deckFiltersList = deckFiltersList
+        this.cost = cost
     }
 
     override fun showLoading() {

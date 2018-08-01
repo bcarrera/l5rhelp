@@ -17,10 +17,39 @@
         android:textColor="@color/black"
         android:textSize="24sp"/>
 
+    <LinearLayout
+        android:id="@+id/cards_filters_range_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cards_filters_range_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:text="0" />
+
+        <SeekBar
+            android:id="@+id/cards_filters_range_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:progress="0"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+
+
     <CheckBox
         android:id="@+id/cards_filters_select_all_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:text="@string/cards_filters_select_all"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"/>
@@ -29,6 +58,7 @@
         android:id="@+id/cards_filters_clans_checkboxes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:orientation="vertical">
 
         <CheckBox
@@ -170,6 +200,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cards_filters_selection_button"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,11 +7,11 @@ import com.l5rhelp.R
 import kotlinx.android.synthetic.main.filters_dialog.*
 import android.view.Gravity
 import android.view.WindowManager
+import android.widget.SeekBar
+import kotlinx.android.synthetic.main.activity_cards_filter.*
 
 
-
-
-class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(context) {
+class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(context), SeekBar.OnSeekBarChangeListener {
 
     private lateinit var mListener : Listener
     var selectedFiltersList : MutableList<String> = mutableListOf()
@@ -27,6 +27,8 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 cards_filters_type_checkboxes.hide()
                 cards_filters_deck_checkboxes.hide()
                 cards_filters_clans_checkboxes.show()
+                cards_filters_range_bar_layout.hide()
+
                 cards_filters_select_all_checkbox.setOnClickListener{
                     if (!cards_filters_select_all_checkbox.isChecked) {
                         clan_crab_checkbox.isChecked = false
@@ -53,6 +55,8 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 cards_filters_deck_checkboxes.hide()
                 cards_filters_clans_checkboxes.hide()
                 cards_filters_type_checkboxes.show()
+                cards_filters_range_bar_layout.hide()
+
                 cards_filters_select_all_checkbox.setOnClickListener{
                     if (!cards_filters_select_all_checkbox.isChecked) {
                         type_attachment_checkbox.isChecked = false
@@ -77,6 +81,8 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 cards_filters_type_checkboxes.hide()
                 cards_filters_clans_checkboxes.hide()
                 cards_filters_deck_checkboxes.show()
+                cards_filters_range_bar_layout.hide()
+
                 cards_filters_select_all_checkbox.setOnClickListener{
                     if (!cards_filters_select_all_checkbox.isChecked) {
                         deck_conflict_checkbox.isChecked = false
@@ -87,6 +93,18 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                     }
                 }
             }
+
+            CardsSearchFilters.COST -> {
+                cards_filters_type_checkboxes.hide()
+                cards_filters_deck_checkboxes.hide()
+                cards_filters_clans_checkboxes.hide()
+                cards_filters_clans_checkboxes.hide()
+                cards_filters_select_all_checkbox.hide()
+                cards_filters_range_bar_layout.show()
+
+                cards_filters_range_bar.setOnSeekBarChangeListener(this)
+            }
+
             CardsSearchFilters.PACK -> TODO()
         }
 
@@ -124,6 +142,13 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                     mListener.filtersDone(selectedFiltersList, CardsSearchFilters.DECK)
                     dismiss()
                 }
+
+                CardsSearchFilters.COST -> {
+                   selectedFiltersList.add(cards_filters_range_bar_text.text.toString())
+
+                    mListener.filtersDone(selectedFiltersList, CardsSearchFilters.COST)
+                    dismiss()
+                }
                 CardsSearchFilters.PACK -> TODO()
             }
         }
@@ -135,5 +160,17 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
 
     interface Listener {
         fun filtersDone(filtersList : MutableList<String>, filterType : CardsSearchFilters)
+    }
+
+    //Seekbar listener
+
+    override fun onStartTrackingTouch(seekBar: SeekBar?) {
+    }
+
+    override fun onStopTrackingTouch(seekBar: SeekBar?) {
+    }
+
+    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+        cards_filters_range_bar_text.text = progress.toString()
     }
 }

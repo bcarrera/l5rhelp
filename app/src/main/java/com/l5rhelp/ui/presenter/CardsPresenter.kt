@@ -23,11 +23,11 @@ class CardsPresenter (val view: CardsPresenter.View,
         }
     }
 
-    fun useFilters (clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>) {
+    fun useFilters (clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>, cost:Int) {
         view.showLoading()
 
         doAsync {
-            cardList = cardDao.useFilters(clanFilters, typeFilters, deckFilters)
+            cardList = cardDao.useFilters(clanFilters, typeFilters, deckFilters, cost)
             uiThread {
                 view.filterSuccess(cardList)
                 view.hideLoading()

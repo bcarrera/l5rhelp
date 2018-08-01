@@ -52,6 +52,9 @@
     <string name="cards_filters_hint">Todos</string>
     <string name="cards_filters_title">Filtros para la búsqueda de cartas</string>
     <string name="cards_filters_clan_title">Clanes</string>
+    <string name="cards_filters_select_all">Seleccionar todos</string>
+    <string name="cards_filters_detail_title">Filtrar</string>
+
     <string-array name="clan_filter">
         <item>scorpion</item>
         <item>dragon</item>

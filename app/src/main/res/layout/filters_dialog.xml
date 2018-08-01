@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,70 +7,76 @@
     android:orientation="vertical"
     android:padding="10dp">
 
+    <TextView
+        android:id="@+id/cards_filters_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cards_filters_detail_title"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+    <CheckBox
+        android:id="@+id/cards_filters_select_all_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cards_filters_select_all"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
     <LinearLayout
         android:id="@+id/cards_filters_clans_checkboxes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cards_filters_selection_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:orientation="vertical">
 
         <CheckBox
             android:id="@+id/clan_crab_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/crab" />
 
         <CheckBox
             android:id="@+id/clan_crane_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/crane" />
 
         <CheckBox
             android:id="@+id/clan_dragon_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/dragon" />
 
         <CheckBox
             android:id="@+id/clan_lion_checkbob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/lion" />
 
         <CheckBox
             android:id="@+id/clan_phoenix_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/phoenix" />
 
         <CheckBox
             android:id="@+id/clan_scorpion_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/scorpion" />
 
         <CheckBox
             android:id="@+id/clan_unicorn_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/unicorn" />
 
         <CheckBox
             android:id="@+id/clan_neutral_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/neutral" />
 
     </LinearLayout>
@@ -80,58 +86,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cards_filters_selection_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:visibility="gone">
 
         <CheckBox
             android:id="@+id/type_attachment_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/attachment" />
 
         <CheckBox
             android:id="@+id/type_character_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/character" />
 
         <CheckBox
             android:id="@+id/type_event_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/event" />
 
         <CheckBox
             android:id="@+id/type_holding_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/holding" />
 
         <CheckBox
             android:id="@+id/type_province_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/province" />
 
         <CheckBox
             android:id="@+id/type_role_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/role" />
 
         <CheckBox
             android:id="@+id/type_stronghold_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/stronghold" />
     </LinearLayout>
 
@@ -141,38 +137,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/cards_filters_selection_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:visibility="gone">
 
         <CheckBox
             android:id="@+id/deck_conflict_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/conflict" />
 
         <CheckBox
             android:id="@+id/deck_dinasty_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/dinasty" />
 
-        <CheckBox
+        <!--CheckBox
             android:id="@+id/deck_province_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/province" />
 
         <CheckBox
             android:id="@+id/deck_role_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/role" />
+            android:text="@string/role" /-->
 
     </LinearLayout>
 
@@ -181,9 +170,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cards_filters_selection_button"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

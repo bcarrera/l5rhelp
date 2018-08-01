@@ -123,4 +123,8 @@
         <item>unicorn</item>
     </string-array>
 
+    <!-- Settings -->
+    <string name="error_no_image">Nos e ha encontrado imagen de la carta seleccionada</string>
+
+
 </resources>

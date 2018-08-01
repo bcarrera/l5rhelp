@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.l5rhelp.R
 import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.model.Card
@@ -39,10 +40,15 @@ class CardDetailFragment : Fragment() {
     fun initImage (card : Card) {
         card_detail_text_info_layout.hide()
         card_detail_image.show()
-        if(card.packCards[0].imageUrl.isNullOrEmpty()) {
-            card_detail_image.loadUrl(card.packCards[1].imageUrl)
+        if(!card.packCards.isEmpty()) {
+            if(card.packCards[0].imageUrl.isNullOrEmpty()) {
+                card_detail_image.loadUrl(card.packCards[1].imageUrl)
+            } else {
+                card_detail_image.loadUrl(card.packCards[0].imageUrl)
+            }
         } else {
-            card_detail_image.loadUrl(card.packCards[0].imageUrl)
+            initTextInfo(card)
+            context?.toast(getString(R.string.error_no_image))
         }
     }
 
@@ -95,16 +101,17 @@ class CardDetailFragment : Fragment() {
 
         card_detail_text.text = card.textCanonical?.capitalize()
 
-        if(card.packCards[0].flavor != null){
+        if(!card.packCards.isEmpty() && card.packCards[0].flavor != null){
             card_detail_flavor.show()
             card_detail_flavor.text = card.packCards[0].flavor
         } else {
             card_detail_flavor.hide()
         }
 
-        card_detail_pack.text = card.packCards[0].pack.id.capitalize()
-        card_detail_ilustrator.text = " - " + card.packCards[0].illustrator
-
+        if(!card.packCards.isEmpty()) {
+            card_detail_pack.text = card.packCards[0].pack.id.capitalize()
+            card_detail_ilustrator.text = " - " + card.packCards[0].illustrator
+        }
     }
 
 }// Required empty public constructor

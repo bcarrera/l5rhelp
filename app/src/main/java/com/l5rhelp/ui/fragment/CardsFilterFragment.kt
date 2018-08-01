@@ -17,7 +17,7 @@ class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
     private var clanFiltersList : MutableList<String> = mutableListOf()
     private var typeFiltersList : MutableList<String> = mutableListOf()
     private var deckFiltersList : MutableList<String> = mutableListOf()
-    private var cost : Int = 20
+    private var cost : MutableList<String> = mutableListOf()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -102,8 +102,9 @@ class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
         }
 
             CardsSearchFilters.COST ->{
-                cards_filters_cost_selection.text = filtersList[0]
-                cost = filtersList[0].toInt()
+                cards_filters_cost_selection.text = filtersList[0] + " -> " + filtersList[1]
+                cost.clear()
+                cost = filtersList
             }
 
             CardsSearchFilters.PACK -> TODO()

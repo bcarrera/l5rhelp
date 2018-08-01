@@ -24,7 +24,7 @@ class CardsFragment : Fragment(), CardsPresenter.View {
     private var clanFiltersList : List<String> = emptyList()
     private var typeFiltersList : List<String> = emptyList()
     private var deckFiltersList : List<String> = emptyList()
-    var cost : Int = 20
+    var cost : List<String> = emptyList()
 
     //Dagger
     @Inject lateinit var mPresenter: CardsPresenter
@@ -42,7 +42,7 @@ class CardsFragment : Fragment(), CardsPresenter.View {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         init()
-        if(clanFiltersList.isNotEmpty() || typeFiltersList.isNotEmpty() || deckFiltersList.isNotEmpty()) mPresenter.useFilters(clanFiltersList, typeFiltersList, deckFiltersList, cost)
+        if(clanFiltersList.isNotEmpty() || typeFiltersList.isNotEmpty() || deckFiltersList.isNotEmpty() || cost.isNotEmpty()) mPresenter.useFilters(clanFiltersList, typeFiltersList, deckFiltersList, cost)
     }
 
     private fun init () {
@@ -88,7 +88,7 @@ class CardsFragment : Fragment(), CardsPresenter.View {
         }
     }
 
-    fun setFilters (clanFiltersList: List<String>, typeFiltersList: List<String>, deckFiltersList: List<String>, cost:Int) {
+    fun setFilters (clanFiltersList: List<String>, typeFiltersList: List<String>, deckFiltersList: List<String>, cost: List<String>) {
         this.clanFiltersList = clanFiltersList
         this.typeFiltersList = typeFiltersList
         this.deckFiltersList = deckFiltersList

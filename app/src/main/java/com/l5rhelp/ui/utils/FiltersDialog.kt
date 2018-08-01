@@ -3,15 +3,14 @@ package com.l5rhelp.ui.utils
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import com.l5rhelp.R
-import kotlinx.android.synthetic.main.filters_dialog.*
 import android.view.Gravity
 import android.view.WindowManager
-import android.widget.SeekBar
-import kotlinx.android.synthetic.main.activity_cards_filter.*
+import com.appyvet.materialrangebar.RangeBar
+import com.l5rhelp.R
+import kotlinx.android.synthetic.main.filters_dialog.*
 
 
-class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(context), SeekBar.OnSeekBarChangeListener {
+class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(context), RangeBar.OnRangeBarChangeListener {
 
     private lateinit var mListener : Listener
     var selectedFiltersList : MutableList<String> = mutableListOf()
@@ -102,7 +101,7 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 cards_filters_select_all_checkbox.hide()
                 cards_filters_range_bar_layout.show()
 
-                cards_filters_range_bar.setOnSeekBarChangeListener(this)
+                cards_filters_range_bar.setOnRangeBarChangeListener(this)
             }
 
             CardsSearchFilters.PACK -> TODO()
@@ -144,7 +143,8 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 }
 
                 CardsSearchFilters.COST -> {
-                   selectedFiltersList.add(cards_filters_range_bar_text.text.toString())
+                    selectedFiltersList.add(cards_filters_range_bar_left_text.text.toString())
+                    selectedFiltersList.add(cards_filters_range_bar_right_text.text.toString())
 
                     mListener.filtersDone(selectedFiltersList, CardsSearchFilters.COST)
                     dismiss()
@@ -164,13 +164,8 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
 
     //Seekbar listener
 
-    override fun onStartTrackingTouch(seekBar: SeekBar?) {
-    }
-
-    override fun onStopTrackingTouch(seekBar: SeekBar?) {
-    }
-
-    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-        cards_filters_range_bar_text.text = progress.toString()
+    override fun onRangeChangeListener(rangeBar: RangeBar?, leftPinIndex: Int, rightPinIndex: Int, leftPinValue: String?, rightPinValue: String?) {
+        cards_filters_range_bar_left_text.text = leftPinValue.toString()
+        cards_filters_range_bar_right_text.text = rightPinValue.toString()
     }
 }

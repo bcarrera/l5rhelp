@@ -37,6 +37,7 @@ class CardsFilterFragment : Fragment(), FiltersDialog.Listener {
         clanFiltersList = context?.resources?.getStringArray(R.array.clan_filter)!!.toMutableList()
         typeFiltersList = context?.resources?.getStringArray(R.array.type_filter)!!.toMutableList()
         deckFiltersList = context?.resources?.getStringArray(R.array.deck_filter)!!.toMutableList()
+        cost = context?.resources?.getStringArray(R.array.cost_filter)!!.toMutableList()
 
         cards_filters_clan_layout.setOnClickListener {
             val clanFilterDialog = FiltersDialog(context, CardsSearchFilters.CLAN)

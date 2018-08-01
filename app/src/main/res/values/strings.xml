@@ -55,7 +55,10 @@
     <string name="cards_filters_select_all">Seleccionar todos</string>
     <string name="cards_filters_detail_title">Filtrar</string>
     <string name="cards_filters_cost_title">Coste</string>
-
+    <string-array name="cost_filter">
+        <item>0</item>
+        <item>20</item>
+    </string-array>
     <string-array name="clan_filter">
         <item>scorpion</item>
         <item>dragon</item>

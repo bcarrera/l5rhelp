@@ -101,6 +101,8 @@ class CardDetailFragment : Fragment() {
 
         card_detail_text.text = card.textCanonical?.capitalize()
 
+        card_detail_influence.text = "Influence " + card.influenceCost
+
         if(!card.packCards.isEmpty() && card.packCards[0].flavor != null){
             card_detail_flavor.show()
             card_detail_flavor.text = card.packCards[0].flavor
@@ -109,9 +111,9 @@ class CardDetailFragment : Fragment() {
         }
 
         if(!card.packCards.isEmpty()) {
-            card_detail_pack.text = card.packCards[0].pack.id.capitalize()
+            card_detail_pack.text = card.packCards[0].pack.id.capitalize()?.replace("-", " ")
             card_detail_ilustrator.text = " - " + card.packCards[0].illustrator
         }
     }
 
-}// Required empty public constructor
+}

@@ -31,7 +31,7 @@ class MainPresenter (val view: View,
     }
 
     override fun getAllCardsError() {
-        //TODO Error genérico
+        view.defaultError()
     }
 
     private fun getAllCardsFromDatabase () {
@@ -92,5 +92,6 @@ class MainPresenter (val view: View,
         fun showLoading()
         fun hideLoading()
         fun initPresenterSuccess()
+        fun defaultError()
     }
 }

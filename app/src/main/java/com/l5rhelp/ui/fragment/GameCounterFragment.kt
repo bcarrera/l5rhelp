@@ -68,6 +68,7 @@ class GameCounterFragment : Fragment(), GameCounterPresenter.View {
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+        game_clan_image.setOnClickListener{game_clan_spinner.performClick()}
 
         game_honor_add_1.setOnClickListener {
             if (honorCounter in 0..24) {
@@ -133,6 +134,7 @@ class GameCounterFragment : Fragment(), GameCounterPresenter.View {
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+        game_clan_image_2.setOnClickListener{game_clan_spinner_2.performClick()}
 
         game_honor_add_2.setOnClickListener {
             if (honorCounter2 in 0..24) {

@@ -13,6 +13,7 @@ import com.l5rhelp.ui.presenter.MainPresenter
 import com.l5rhelp.ui.utils.addFragment
 import com.l5rhelp.ui.utils.app
 import com.l5rhelp.ui.utils.replaceFragmentSafely
+import com.l5rhelp.ui.utils.toast
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.indeterminateProgressDialog
@@ -105,6 +106,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun hideLoading() {
         dialog.dismiss()
+    }
+
+    override fun defaultError() {
+        toast(getString(R.string.error_default))
     }
 
 }

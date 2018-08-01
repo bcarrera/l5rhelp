@@ -124,7 +124,8 @@
     </string-array>
 
     <!-- Settings -->
-    <string name="error_no_image">Nos e ha encontrado imagen de la carta seleccionada</string>
+    <string name="error_no_image">No se ha encontrado imagen de la carta seleccionada</string>
+    <string name="error_default">Se ha producido un error al obtener los datos. Inténtelo más tarde.</string>
 
 
 </resources>

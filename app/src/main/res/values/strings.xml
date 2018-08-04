@@ -109,7 +109,12 @@
         <item>No actualizar</item>
     </string-array>
     <string name="settings_DB_title">Base de datos</string>
-    <string name="settings_upgrade_DB_title">Actualizar:</string>
+    <string name="settings_upgrade_cards_DB_title">Actualizar cartas ahora:</string>
+    <string name="settings_upgrade_rules_DB_title">Actualizar reglas ahora:</string>
+    <string name="settings_upgrade_DB_button">Actualizar</string>
+    <string name="settings_upgrade_cards_DB_success">Base de datos de cartas actualizada correctamente</string>
+    <string name="settings_upgrade_rules_DB_success">Base de datos de reglas actualizada correctamente</string>
+    <string name="settings_upgrade_DB_error">Error al actualizar la base de datos</string>
 
     <!-- Game counter -->
 

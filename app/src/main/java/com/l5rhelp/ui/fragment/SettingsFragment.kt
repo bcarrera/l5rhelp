@@ -14,6 +14,7 @@ import com.l5rhelp.ui.activity.MainActivity
 import com.l5rhelp.ui.presenter.SettingsPresenter
 import com.l5rhelp.ui.utils.DataBasePeriodicity
 import com.l5rhelp.ui.utils.app
+import com.l5rhelp.ui.utils.toast
 import kotlinx.android.synthetic.main.fragment_settings.*
 import javax.inject.Inject
 
@@ -45,26 +46,14 @@ class SettingsFragment : Fragment(), SettingsPresenter.View {
             presenter.setLoadPhoto(isChecked)
         }
 
-        when(presenter.getDataBasePeriodicity()){
-            DataBasePeriodicity.MONTHLY.name -> settings_upgrade_DB_spinner.setSelection(0)
-            DataBasePeriodicity.WEEKLY.name -> settings_upgrade_DB_spinner.setSelection(1)
-            DataBasePeriodicity.NEVER.name -> settings_upgrade_DB_spinner.setSelection(2)
+        settings_upgrade_cards_DB_button.setOnClickListener {
+            presenter.updateCards()
         }
 
-        settings_upgrade_DB_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
-                when(pos){
-                    0 -> presenter.setDataBasePeriodicity(DataBasePeriodicity.MONTHLY.name)
-                    1 -> presenter.setDataBasePeriodicity(DataBasePeriodicity.WEEKLY.name)
-                    2 -> presenter.setDataBasePeriodicity(DataBasePeriodicity.NEVER.name)
-                }
-            }
-
-            override fun onNothingSelected(parent: AdapterView<out Adapter>?) {
-
-            }
+        settings_upgrade_rules_DB_button.setOnClickListener {
+            presenter.updateRules()
         }
+
     }
 
     override fun showLoading() {
@@ -75,12 +64,15 @@ class SettingsFragment : Fragment(), SettingsPresenter.View {
         (activity as MainActivity).hideLoading()
     }
 
-    override fun upgradingDBSuccess() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun upgradingCardsDBSuccess() {
+        context?.toast(getString(R.string.settings_upgrade_cards_DB_success))
     }
 
     override fun upgradingDBError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        context?.toast(getString(R.string.settings_upgrade_DB_error))
     }
 
+    override fun upgradingRulesDBSuccess() {
+        context?.toast(getString(R.string.settings_upgrade_rules_DB_success))
+    }
 }

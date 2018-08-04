@@ -20,24 +20,7 @@ class RulesPresenter(val view: RulesPresenter.View,
 
     fun initPresenter() {
         view.showLoading()
-        if(preferences.lastRulesDataBaseUpdate == 0L){
-            getAllRulingsInteractor.getAllRulingsInteractor(this)
-        } else {
-            checkPeriodicity()
-        }    }
-
-    private fun getAllRulesFromDatabase () {
-        doAsync {
-            val tableCount : Int = rulingDao.isTableEmpty()
-            uiThread {
-                if(tableCount == 0){
-                    getAllRulingsInteractor.getAllRulingsInteractor(it)
-                } else {
-                    view.hideLoading()
-                    view.initPresenterSuccess()
-                }
-            }
-        }
+        getAllRulingsInteractor.getAllRulingsInteractor(this)
     }
 
     private fun addAllRulings(rulingsListForRoom: List<Ruling>?){
@@ -47,7 +30,6 @@ class RulesPresenter(val view: RulesPresenter.View,
                     rulingDao.insertRuling(ruling)
                     rulesList.add(ruling)
                 }
-                preferences.lastRulesDataBaseUpdate = System.currentTimeMillis()
             }
 
             uiThread {
@@ -58,7 +40,13 @@ class RulesPresenter(val view: RulesPresenter.View,
     }
 
     override fun getAllRulingsSuccess(response: RulingsResponse?) {
-        addAllRulings(response?.records)
+        if(preferences.rulesDataBaseUpdate != response?.size){
+            addAllRulings(response?.records)
+            preferences.rulesDataBaseUpdate = response?.size
+        } else {
+            view.hideLoading()
+            view.initPresenterSuccess()
+        }
     }
 
     override fun getAllRulingsError() {
@@ -76,30 +64,6 @@ class RulesPresenter(val view: RulesPresenter.View,
             }
         }
     }
-
-    private fun checkPeriodicity() {
-        val currentDate = System.currentTimeMillis()
-        val calendar = Calendar.getInstance()
-        calendar.timeInMillis = currentDate
-        when (preferences.dataBasePeriodicity) {
-            DataBasePeriodicity.MONTHLY.name -> {
-                if(currentDate - preferences.lastRulesDataBaseUpdate!! >= 1000*60*60*24*30f) {
-                    getAllRulingsInteractor.getAllRulingsInteractor(this)
-                } else {
-                    getAllRulesFromDatabase()
-                }
-            }
-            DataBasePeriodicity.WEEKLY.name -> {
-                if(currentDate - preferences.lastRulesDataBaseUpdate!! >= 1000*60*60*24*7f) {
-                    getAllRulingsInteractor.getAllRulingsInteractor(this)
-                } else {
-                    getAllRulesFromDatabase()
-                }
-            }
-            DataBasePeriodicity.NEVER.name -> getAllRulesFromDatabase()
-        }
-    }
-
 
     interface View {
         fun showLoading()

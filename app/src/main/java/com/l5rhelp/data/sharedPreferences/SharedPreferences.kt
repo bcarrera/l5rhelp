@@ -28,7 +28,7 @@ class SharedPreferences (context: Context) {
         get() = prefs?.getInt(SETTING_DATABASE_LAST_CARDS_UPDATE, 0)
         set(value) = value?.let { prefs?.edit()?.putInt(SETTING_DATABASE_LAST_CARDS_UPDATE, it)?.apply() }!!
 
-    var lastRulesDataBaseUpdate: Long?
-        get() = prefs?.getLong(SETTING_DATABASE_LAST_RULES_UPDATE, 0)
-        set(value) = value?.let { prefs?.edit()?.putLong(SETTING_DATABASE_LAST_RULES_UPDATE, it)?.apply() }!!
+    var rulesDataBaseUpdate: Int?
+        get() = prefs?.getInt(SETTING_DATABASE_LAST_RULES_UPDATE, 0)
+        set(value) = value?.let { prefs?.edit()?.putInt(SETTING_DATABASE_LAST_RULES_UPDATE, it)?.apply() }!!
 }

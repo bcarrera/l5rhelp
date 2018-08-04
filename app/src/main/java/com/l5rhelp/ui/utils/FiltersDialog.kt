@@ -14,6 +14,7 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
 
     private lateinit var mListener : Listener
     var selectedFiltersList : MutableList<String> = mutableListOf()
+    var traitsBuilder = StringBuilder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +24,12 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
 
         when(type){
             CardsSearchFilters.CLAN -> {
+                cards_filters_title.text = context.getString(R.string.cards_filters_clan_title)
                 cards_filters_type_checkboxes.hide()
                 cards_filters_deck_checkboxes.hide()
                 cards_filters_clans_checkboxes.show()
                 cards_filters_range_bar_layout.hide()
+                cards_filter_traits_layout.hide()
 
                 cards_filters_select_all_checkbox.setOnClickListener{
                     if (!cards_filters_select_all_checkbox.isChecked) {
@@ -51,10 +54,12 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 }
             }
             CardsSearchFilters.TYPE -> {
+                cards_filters_title.text = context.getString(R.string.cards_filters_type_title)
                 cards_filters_deck_checkboxes.hide()
                 cards_filters_clans_checkboxes.hide()
                 cards_filters_type_checkboxes.show()
                 cards_filters_range_bar_layout.hide()
+                cards_filter_traits_layout.hide()
 
                 cards_filters_select_all_checkbox.setOnClickListener{
                     if (!cards_filters_select_all_checkbox.isChecked) {
@@ -77,10 +82,12 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 }
             }
             CardsSearchFilters.DECK -> {
+                cards_filters_title.text = context.getString(R.string.cards_filters_deck_title)
                 cards_filters_type_checkboxes.hide()
                 cards_filters_clans_checkboxes.hide()
                 cards_filters_deck_checkboxes.show()
                 cards_filters_range_bar_layout.hide()
+                cards_filter_traits_layout.hide()
 
                 cards_filters_select_all_checkbox.setOnClickListener{
                     if (!cards_filters_select_all_checkbox.isChecked) {
@@ -94,14 +101,27 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
             }
 
             CardsSearchFilters.COST -> {
+                cards_filters_title.text = context.getString(R.string.cards_filters_cost_title)
                 cards_filters_type_checkboxes.hide()
                 cards_filters_deck_checkboxes.hide()
                 cards_filters_clans_checkboxes.hide()
                 cards_filters_clans_checkboxes.hide()
                 cards_filters_select_all_checkbox.hide()
                 cards_filters_range_bar_layout.show()
+                cards_filter_traits_layout.hide()
 
                 cards_filters_range_bar.setOnRangeBarChangeListener(this)
+            }
+
+            CardsSearchFilters.TRAITS -> {
+                cards_filters_title.text = context.getString(R.string.cards_filters_traits_title)
+                cards_filters_type_checkboxes.hide()
+                cards_filters_deck_checkboxes.hide()
+                cards_filters_clans_checkboxes.hide()
+                cards_filters_clans_checkboxes.hide()
+                cards_filters_select_all_checkbox.hide()
+                cards_filters_range_bar_layout.hide()
+                cards_filter_traits_layout.show()
             }
 
             CardsSearchFilters.PACK -> TODO()
@@ -149,7 +169,25 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                     mListener.filtersDone(selectedFiltersList, CardsSearchFilters.COST)
                     dismiss()
                 }
+
+                CardsSearchFilters.TRAITS -> {
+                    mListener.filtersDone(selectedFiltersList, CardsSearchFilters.TRAITS)
+                    dismiss()
+                }
+
                 CardsSearchFilters.PACK -> TODO()
+            }
+        }
+
+        cards_filters_traits_imageview.setOnClickListener{
+            selectedFiltersList.add(cards_filter_traits_edtitext.text.toString().toLowerCase())
+            selectedFiltersList.forEach {
+                if(traitsBuilder.isEmpty()) {
+                    traitsBuilder.append(cards_filter_traits_edtitext.text.toString())
+                } else {
+                    traitsBuilder.append(". ").append(cards_filter_traits_edtitext.text.toString())
+                }
+                cards_filter_traits_search.text = traitsBuilder.toString()
             }
         }
     }
@@ -168,4 +206,6 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
         cards_filters_range_bar_left_text.text = leftPinValue.toString()
         cards_filters_range_bar_right_text.text = rightPinValue.toString()
     }
+
+
 }

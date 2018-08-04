@@ -23,7 +23,7 @@ class CardsPresenter (val view: CardsPresenter.View,
         }
     }
 
-    fun useFilters (clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>, cost: List<String>) {
+    fun useFilters (clanFilters : List<String>, typeFilters : List<String>, deckFilters : List<String>, cost: List<String>, traitsFilters : List<String>) {
         view.showLoading()
 
         doAsync {

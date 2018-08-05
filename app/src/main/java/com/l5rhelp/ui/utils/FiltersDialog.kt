@@ -187,6 +187,7 @@ class FiltersDialog(context: Context?, val type : CardsSearchFilters) : Dialog(c
                 } else {
                     traitsBuilder.append(". ").append(cards_filter_traits_edtitext.text.toString())
                 }
+                cards_filter_traits_edtitext.setText("")
                 cards_filter_traits_search.text = traitsBuilder.toString()
             }
         }

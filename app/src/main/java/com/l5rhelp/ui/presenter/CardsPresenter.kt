@@ -29,7 +29,11 @@ class CardsPresenter (val view: CardsPresenter.View,
         doAsync {
             cardList = cardDao.useFilters(clanFilters, typeFilters, deckFilters, cost[0].toInt(), cost[1].toInt())
             uiThread {
-                view.filterSuccess(cardList)
+                if(traitsFilters.isEmpty()){
+                    view.filterSuccess(cardList)
+                } else {
+                    view.filterSuccess(cardList.filter { it.traits.containsAll(traitsFilters) })
+                }
                 view.hideLoading()
             }
         }

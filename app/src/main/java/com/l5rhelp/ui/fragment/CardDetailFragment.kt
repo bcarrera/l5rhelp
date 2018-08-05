@@ -101,7 +101,8 @@ class CardDetailFragment : Fragment() {
 
         card_detail_text.text = card.textCanonical?.capitalize()
 
-        card_detail_influence.text = "Influence " + card.influenceCost
+        if(card.influenceCost > 0)card_detail_influence.text = "Influence " + card.influenceCost
+        if(card.unicity)card_detail_unique.text = "Unique"
 
         if(!card.packCards.isEmpty() && card.packCards[0].flavor != null){
             card_detail_flavor.show()

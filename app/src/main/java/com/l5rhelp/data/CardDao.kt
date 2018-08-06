@@ -12,7 +12,7 @@ interface CardDao {
     @Query("SELECT * FROM card_table")
     fun getAllCards(): MutableList<Card>
 
-    @Query("SELECT * FROM card_table WHERE name LIKE :name")
+    @Query("SELECT * FROM card_table WHERE name LIKE :name OR text LIKE :name")
     fun filterByName(name : String): MutableList<Card>
 
     @Query("SELECT * FROM card_table WHERE clan IN (:clanFilters) AND type IN (:typeFilters) AND side IN (:deckFilters) AND cost BETWEEN (:minCost) AND (:maxCost)")

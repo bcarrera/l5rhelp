@@ -1,0 +1,144 @@
+<resources>
+
+    <!-- App -->
+    <string name="app_name">L5R Help</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Common -->
+    <string name="scorpion">Scorpion</string>
+    <string name="dragon">Dragon</string>
+    <string name="phoenix">Phoenix</string>
+    <string name="unicorn">Unicorn</string>
+    <string name="crane">Crane</string>
+    <string name="crab">Crab</string>
+    <string name="lion">Lion</string>
+    <string name="neutral">Neutral</string>
+
+    <string name="attachment">Attachment</string>
+    <string name="character">Character</string>
+    <string name="event">Event</string>
+    <string name="holding">Holding</string>
+    <string name="province">Province</string>
+    <string name="role">Role</string>
+    <string name="stronghold">Stronghold</string>
+
+    <string name="conflict">Conflict</string>
+    <string name="dinasty">Dynasty</string>
+
+    <!-- Main activity -->
+    <string name="main_exit_text">¿Quieres salir de la aplicación?</string>
+    <string name="main_exit_title">L5R Help</string>
+    <string name="main_exit_yes">Aceptar</string>
+    <string name="main_exit_no">Cancelar</string>
+    <string name="main_loading">Cargando</string>
+
+    <!-- Left Menu -->
+    <string name="left_menu_title1">L5R Help</string>
+    <string name="left_menu_title2">Una herramienta para facilitar el desarrollo de tus partidas</string>
+
+    <string name="left_menu_option1">Cartas</string>
+    <string name="left_menu_option2">Reglas</string>
+    <string name="left_menu_option3">Ajustes</string>
+    <string name="left_menu_option4">Partida</string>
+
+    <!-- Cards -->
+    <string name="cards_intructions">Elije los filtros que necesites o realiza una búsqueda por el nombre de la carta.</string>
+    <string name="cards_search_hint">Nombre de la carta</string>
+    <string name="cards_search_no_results">No se han encontrado resultados para esa búsqueda</string>
+
+    <!-- Cards Filters-->
+    <string name="cards_filters_hint">Todos</string>
+    <string name="cards_filters_title">Filtros para la búsqueda de cartas</string>
+    <string name="cards_filters_clan_title">Clanes</string>
+    <string name="cards_filters_select_all">Seleccionar todos</string>
+    <string name="cards_filters_detail_title">Filtrar</string>
+    <string name="cards_filters_cost_title">Coste</string>
+    <string name="cards_filters_traits_title">Atributos</string>
+
+    <string-array name="cost_filter">
+        <item>0</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="clan_filter">
+        <item>scorpion</item>
+        <item>dragon</item>
+        <item>phoenix</item>
+        <item>crab</item>
+        <item>crane</item>
+        <item>lion</item>
+        <item>unicorn</item>
+        <item>neutral</item>
+    </string-array>
+    <string name="cards_filters_type_title">Tipo de carta</string>
+    <string-array name="type_filter">
+        <item>attachment</item>
+        <item>character</item>
+        <item>event</item>
+        <item>holding</item>
+        <item>province</item>
+        <item>role</item>
+        <item>stronghold</item>
+    </string-array>
+    <string name="cards_filters_deck_title">Tipo de mazo</string>
+    <string-array name="deck_filter">
+        <item>conflict</item>
+        <item>dynasty</item>
+        <item>province</item>
+        <item>role</item>
+    </string-array>
+    <string name="card_filters_button">Aplicar filtros</string>
+    <string name="title_activity_cards_filter">CardsFilterActivity</string>
+    <string name="cards_filters_selection_button">Aceptar</string>
+    <string name="cards_filters_traits_warning">*Pulsa en el "+" para ir añadiendo atrbutos a la búsqueda</string>
+    <string name="cards_filters_traits_hint">Introduce un atributo</string>
+
+    <!-- Rules -->
+
+    <string name="ruling_detail_link_title">Enlace</string>
+
+    <!-- Settings -->
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_images_title">Imágenes</string>
+    <string name="settings_load_photo">Descargar imagen para el detalle de una carta</string>
+    <string-array name="upgrade_DDBB">
+        <item>Mensualmente</item>
+        <item>Semanalmente</item>
+        <item>No actualizar</item>
+    </string-array>
+    <string name="settings_DB_title">Base de datos</string>
+    <string name="settings_upgrade_cards_DB_title">Actualizar cartas ahora:</string>
+    <string name="settings_upgrade_rules_DB_title">Actualizar reglas ahora:</string>
+    <string name="settings_upgrade_DB_button">Actualizar</string>
+    <string name="settings_upgrade_cards_DB_success">Base de datos de cartas actualizada correctamente</string>
+    <string name="settings_upgrade_rules_DB_success">Base de datos de reglas actualizada correctamente</string>
+    <string name="settings_upgrade_DB_error">Error al actualizar la base de datos</string>
+
+    <!-- Game counter -->
+
+    <string name="game_title">Contador de la partida</string>
+    <string name="game_player_1">Jugador 1</string>
+    <string name="game_player_2">Jugador 2</string>
+    <string name="game_clan_title">Clan</string>
+    <string name="game_honor_title">Honor</string>
+    <string name="game_fate_title">Destino</string>
+    <string name="game_dial_title">Dial</string>
+
+    <string-array name="playing_clans_list">
+        <item>scorpion</item>
+        <item>dragon</item>
+        <item>phoenix</item>
+        <item>crab</item>
+        <item>crane</item>
+        <item>lion</item>
+        <item>unicorn</item>
+    </string-array>
+
+    <!-- Settings -->
+    <string name="error_no_image">No se ha encontrado imagen de la carta seleccionada</string>
+    <string name="error_default">Se ha producido un error al obtener los datos. Inténtelo más tarde.</string>
+
+
+</resources>

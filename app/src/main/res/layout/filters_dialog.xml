@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/cards_filters_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cards_filters_detail_title"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:id="@+id/cards_filter_traits_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cards_filter_traits_edtitext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/cards_filters_traits_hint" />
+
+            <ImageView
+                android:id="@+id/cards_filters_traits_imageview"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_input_add" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cards_filter_traits_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/cards_filters_traits_warning" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cards_filters_range_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cards_filters_range_bar_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cards_filters_range_bar_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="16dp"
+            android:text="20"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.appyvet.materialrangebar.RangeBar
+            android:id="@+id/cards_filters_range_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:mrb_pinMaxFont="10sp"
+            app:mrb_pinTextColor="@color/black"
+            app:mrb_rangeBarPaddingBottom="12dp"
+            app:mrb_selectorBoundaryColor="@color/black"
+            app:mrb_selectorBoundarySize="2dp"
+            app:mrb_selectorSize="10dp"
+            app:mrb_temporaryPins="true"
+            app:mrb_tickEnd="20"
+            app:mrb_tickInterval="1"
+            app:mrb_tickStart="0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <CheckBox
+        android:id="@+id/cards_filters_select_all_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/cards_filters_select_all"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/cards_filters_clans_checkboxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/clan_crab_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crab" />
+
+        <CheckBox
+            android:id="@+id/clan_crane_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crane" />
+
+        <CheckBox
+            android:id="@+id/clan_dragon_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dragon" />
+
+        <CheckBox
+            android:id="@+id/clan_lion_checkbob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lion" />
+
+        <CheckBox
+            android:id="@+id/clan_phoenix_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phoenix" />
+
+        <CheckBox
+            android:id="@+id/clan_scorpion_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scorpion" />
+
+        <CheckBox
+            android:id="@+id/clan_unicorn_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unicorn" />
+
+        <CheckBox
+            android:id="@+id/clan_neutral_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/neutral" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cards_filters_type_checkboxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/type_attachment_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/attachment" />
+
+        <CheckBox
+            android:id="@+id/type_character_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/character" />
+
+        <CheckBox
+            android:id="@+id/type_event_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/event" />
+
+        <CheckBox
+            android:id="@+id/type_holding_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/holding" />
+
+        <CheckBox
+            android:id="@+id/type_province_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/province" />
+
+        <CheckBox
+            android:id="@+id/type_role_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/role" />
+
+        <CheckBox
+            android:id="@+id/type_stronghold_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stronghold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/cards_filters_deck_checkboxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/deck_conflict_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/conflict" />
+
+        <CheckBox
+            android:id="@+id/deck_dinasty_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dinasty" />
+
+        <!--CheckBox
+            android:id="@+id/deck_province_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/province" />
+
+        <CheckBox
+            android:id="@+id/deck_role_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/role" /-->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cards_filters_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cards_filters_selection_button"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</LinearLayout>

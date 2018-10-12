@@ -15,42 +15,23 @@ class MainPresenter (val view: View,
                      val cardDao: CardDao,
                      val preferences: SharedPreferences): GetAllCardsInteractor.Presenter {
 
-    var cardList : List<Card> = emptyList()
-
     fun initPresenter() {
         view.showLoading()
-        if(preferences.lastCardsDataBaseUpdate == 0L){
-            getAllCardsInteractor.getAllCardsInteractor(this)
-        } else {
-            checkPeriodicity()
-        }
+        getAllCardsInteractor.getAllCardsInteractor(this)
     }
 
     override fun getAllCardsSuccess(response : CardsResponse?) {
-        addAllCards(response?.records)
+        if(preferences.cardsDataBaseUpdate != response?.size) {
+            addAllCards(response?.records)
+            preferences.cardsDataBaseUpdate = response?.size
+        } else {
+            view.hideLoading()
+            view.initPresenterSuccess()
+        }
     }
 
     override fun getAllCardsError() {
         view.defaultError()
-    }
-
-    private fun getAllCardsFromDatabase () {
-        doAsync {
-            val tableCount : Int = cardDao.isTableEmpty()
-            uiThread {
-                if(tableCount == 0){
-                    getAllCardsInteractor.getAllCardsInteractor(it)
-                } else {
-                    view.hideLoading()
-                    view.initPresenterSuccess()
-                }
-            }
-        }
-
-    }
-
-    fun getAllCards () : List<Card> {
-        return cardList
     }
 
     private fun addAllCards(cardsListForRoom: List<Card>?){
@@ -58,33 +39,11 @@ class MainPresenter (val view: View,
             if (cardsListForRoom != null) {
                 for (card in cardsListForRoom) cardDao.insertCard(card)
             }
-            preferences.lastCardsDataBaseUpdate = System.currentTimeMillis()
 
             uiThread {
                 view.hideLoading()
                 view.initPresenterSuccess()
             }
-        }
-    }
-
-    private fun checkPeriodicity() {
-        val currentDate = System.currentTimeMillis()
-        when (preferences.dataBasePeriodicity) {
-            DataBasePeriodicity.MONTHLY.name -> {
-                if(currentDate - preferences.lastCardsDataBaseUpdate!! >= 1000*60*60*24*30f) {
-                    getAllCardsInteractor.getAllCardsInteractor(this)
-                } else {
-                    getAllCardsFromDatabase()
-                }
-            }
-            DataBasePeriodicity.WEEKLY.name -> {
-                if(currentDate - preferences.lastCardsDataBaseUpdate!! >= 1000*60*60*24*7f) {
-                    getAllCardsInteractor.getAllCardsInteractor(this)
-                } else {
-                    getAllCardsFromDatabase()
-                }
-            }
-            DataBasePeriodicity.NEVER.name -> getAllCardsFromDatabase()
         }
     }
 

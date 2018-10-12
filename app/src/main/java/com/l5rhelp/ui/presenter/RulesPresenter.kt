@@ -1,14 +1,12 @@
 package com.l5rhelp.ui.presenter
 
-import com.l5rhelp.data.RulingDao
+import com.l5rhelp.data.db.RulingDao
 import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllRulingsInteractor
 import com.l5rhelp.domain.model.Ruling
 import com.l5rhelp.domain.model.RulingsResponse
-import com.l5rhelp.ui.utils.DataBasePeriodicity
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
-import java.util.*
 
 
 class RulesPresenter(val view: RulesPresenter.View,

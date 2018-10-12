@@ -3,7 +3,7 @@ package com.l5rhelp.dagger
 import android.arch.persistence.room.Room
 import android.content.Context
 import com.l5rhelp.base.App
-import com.l5rhelp.data.L5RHelpDatabase
+import com.l5rhelp.data.db.L5RHelpDatabase
 import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.squareup.picasso.Picasso
 import dagger.Module

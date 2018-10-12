@@ -1,6 +1,6 @@
 package com.l5rhelp.dagger.submodules
 
-import com.l5rhelp.data.RulingDao
+import com.l5rhelp.data.db.RulingDao
 import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllRulingsInteractor
 import com.l5rhelp.ui.fragment.RulesFragment

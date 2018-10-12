@@ -1,7 +1,7 @@
 package com.l5rhelp.dagger.submodules
 
-import com.l5rhelp.data.CardDao
-import com.l5rhelp.data.RulingDao
+import com.l5rhelp.data.db.CardDao
+import com.l5rhelp.data.db.RulingDao
 import com.l5rhelp.data.sharedPreferences.SharedPreferences
 import com.l5rhelp.domain.interactors.GetAllCardsInteractor
 import com.l5rhelp.domain.interactors.GetAllRulingsInteractor

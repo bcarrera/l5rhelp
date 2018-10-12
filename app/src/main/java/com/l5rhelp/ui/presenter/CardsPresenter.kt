@@ -1,6 +1,6 @@
 package com.l5rhelp.ui.presenter
 
-import com.l5rhelp.data.CardDao
+import com.l5rhelp.data.db.CardDao
 import com.l5rhelp.domain.model.Card
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
